@@ -114,6 +114,9 @@ export default function RevenueCalculator() {
               >
                 Get Your Real Numbers
               </Link>
+              <p className="mt-4 font-mono text-[10px] text-zinc-400 text-center leading-relaxed">
+                Estimates based on industry averages. Actual results vary by niche, engagement, and product quality.
+              </p>
             </div>
           </SlideIn>
         </div>

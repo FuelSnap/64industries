@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { FadeIn, SlideIn, StaggerContainer, StaggerItem, HoverScale, GradientOrb } from "@/components/Motion";
 
 const philosophy = [
@@ -22,6 +23,13 @@ const philosophy = [
   },
 ];
 
+const credentials = [
+  { label: "YouTube", value: "1.5M+ Subscribers" },
+  { label: "Creator Since", value: "2013" },
+  { label: "Brands Built", value: "Multiple 6-Figure" },
+  { label: "Based In", value: "Toronto, Canada" },
+];
+
 export default function Founder() {
   return (
     <>
@@ -39,42 +47,52 @@ export default function Founder() {
       {/* Bio (Light) */}
       <section className="py-24 lg:py-32 px-8 bg-white">
         <div className="max-w-[1100px] mx-auto">
-          <div className="grid md:grid-cols-[320px_1fr] gap-12 items-start">
-            {/* Photo Placeholder */}
+          <div className="grid md:grid-cols-[380px_1fr] gap-12 items-start">
+            {/* Photo */}
             <SlideIn direction="left">
-              <div className="bg-surface-muted rounded-card border border-surface-border aspect-square flex items-center justify-center">
-                <div className="text-center">
-                  <div className="font-display font-700 text-xl text-zinc-300 uppercase tracking-wide">
-                    Portrait
-                  </div>
-                  <div className="font-mono text-[10px] text-zinc-400 uppercase tracking-widest mt-1">
-                    Placeholder
-                  </div>
-                </div>
+              <div className="rounded-card overflow-hidden border border-surface-border shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
+                <Image
+                  src="/founder.jpg"
+                  alt="Founder of 64 Industries"
+                  width={380}
+                  height={380}
+                  className="w-full object-cover aspect-[4/5]"
+                  priority
+                />
               </div>
             </SlideIn>
 
             {/* Bio Text */}
             <SlideIn direction="right" delay={0.15}>
               <div>
-                <h2 className="font-display font-800 text-2xl md:text-3xl tracking-tight text-zinc-900 mb-2 uppercase">
+                <h2 className="font-display font-800 text-2xl md:text-3xl tracking-tight text-zinc-900 mb-2">
                   Founder & CEO
                 </h2>
-                <div className="font-mono text-[11px] text-zinc-400 uppercase tracking-widest mb-8">
+                <div className="font-mono text-[11px] text-brand-red uppercase tracking-widest mb-6">
                   64 Industries
+                </div>
+
+                {/* Credential badges */}
+                <div className="flex flex-wrap gap-3 mb-8">
+                  {credentials.map((c) => (
+                    <div key={c.label} className="bg-surface-muted rounded-btn px-3 py-1.5 border border-surface-border">
+                      <span className="font-mono text-[9px] text-zinc-400 uppercase tracking-widest">{c.label}</span>
+                      <span className="font-display font-600 text-[13px] text-zinc-900 ml-2">{c.value}</span>
+                    </div>
+                  ))}
                 </div>
 
                 <div className="space-y-5 text-zinc-500 text-[16px] leading-relaxed">
                   <p>
-                    I started in the creative world — building brands, designing
-                    websites, and creating content for businesses and creators.
-                    Over the years, I worked with dozens of creators and kept
-                    seeing the same pattern.
+                    I built my career as a creator — growing a YouTube channel to
+                    over 1.5 million subscribers, launching a merch brand, and learning
+                    every side of the creator business firsthand.
                   </p>
                   <p>
-                    Talented people with real audiences, making almost nothing from
-                    them. They&apos;d get a $300 brand deal here, a $500 affiliate
-                    commission there, and think that was the ceiling.
+                    Along the way, I worked with dozens of creators and kept
+                    seeing the same pattern: talented people with real audiences,
+                    making almost nothing from them. A $300 brand deal here, a $500
+                    affiliate commission there, and thinking that was the ceiling.
                   </p>
                   <p>
                     That gap between what creators earn and what they could earn is
@@ -83,8 +101,10 @@ export default function Founder() {
                     don&apos;t make money for the creator, we don&apos;t make money.
                   </p>
                   <p>
-                    My focus on building resilient systems and fostering long-term
-                    partnerships has redefined industry standards.
+                    I&apos;ve been in the trenches — building audiences, negotiating
+                    deals, launching products, running ads. 64 Industries exists because
+                    I know what creators go through, and I know what&apos;s possible
+                    when someone actually helps them build a real business.
                   </p>
                 </div>
               </div>

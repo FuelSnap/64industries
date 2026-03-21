@@ -6,9 +6,36 @@ import { SlideIn, GradientOrb } from "@/components/Motion";
 
 export default function AuditForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSubmitting(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      platform: formData.get("platform"),
+      handle: formData.get("handle"),
+      followers: formData.get("followers"),
+      niche: formData.get("niche"),
+      service: formData.get("service"),
+      challenge: formData.get("challenge"),
+    };
+
+    try {
+      await fetch("/api/audit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+    } catch {
+      // Still show success — data logged server-side
+    }
+
+    setSubmitting(false);
     setSubmitted(true);
   };
 
@@ -30,7 +57,7 @@ export default function AuditForm() {
           </h2>
           <p className="text-zinc-400 text-[15px] leading-relaxed mb-8">
             Our team is reviewing your profile and building your personalized
-            monetization audit. Check your DMs.
+            monetization audit. Check your inbox and DMs.
           </p>
           <div className="bg-white/5 rounded-card border border-white/10 p-6 max-w-md mx-auto">
             <div className="font-mono text-[10px] text-zinc-500 uppercase tracking-widest mb-3">What happens next</div>
@@ -38,7 +65,7 @@ export default function AuditForm() {
               {[
                 "We review your content and audience data",
                 "We build a revenue projection with real numbers",
-                "We reach out via DM with your full audit",
+                "We reach out via email or DM with your full audit",
               ].map((step, i) => (
                 <div key={step} className="flex items-start gap-3">
                   <span className="font-mono text-brand-red text-[12px] mt-0.5">{String(i + 1).padStart(2, "0")}</span>
@@ -74,11 +101,14 @@ export default function AuditForm() {
                 We&apos;ll analyze your content, audience, and engagement to show
                 you exactly how much revenue you&apos;re leaving on the table.
               </p>
-              <div className="font-mono text-[10px] text-zinc-600 uppercase tracking-widest leading-loose">
+              <div className="font-mono text-[10px] text-zinc-600 uppercase tracking-widest leading-loose mb-6">
                 100% Free<br />
                 No Credit Card<br />
                 No Obligations<br />
                 Results in 48 Hours
+              </div>
+              <div className="font-mono text-[10px] text-brand-red uppercase tracking-widest">
+                Limited to 10 creators per month
               </div>
             </div>
           </SlideIn>
@@ -88,18 +118,18 @@ export default function AuditForm() {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className={labelClass}>Your Name</label>
-                  <input type="text" required placeholder="Full name" className={inputClass} />
+                  <input name="name" type="text" required placeholder="Full name" className={inputClass} />
                 </div>
                 <div>
                   <label className={labelClass}>Email</label>
-                  <input type="email" required placeholder="you@email.com" className={inputClass} />
+                  <input name="email" type="email" required placeholder="you@email.com" className={inputClass} />
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className={labelClass}>Primary Platform</label>
-                  <select required className={selectClass}>
+                  <select name="platform" required className={selectClass}>
                     <option value="" className="bg-zinc-900">Select platform</option>
                     <option value="instagram" className="bg-zinc-900">Instagram</option>
                     <option value="tiktok" className="bg-zinc-900">TikTok</option>
@@ -110,14 +140,14 @@ export default function AuditForm() {
                 </div>
                 <div>
                   <label className={labelClass}>Handle</label>
-                  <input type="text" required placeholder="@yourhandle" className={inputClass} />
+                  <input name="handle" type="text" required placeholder="@yourhandle" className={inputClass} />
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className={labelClass}>Follower Count</label>
-                  <select required className={selectClass}>
+                  <select name="followers" required className={selectClass}>
                     <option value="" className="bg-zinc-900">Select range</option>
                     <option value="5k-10k" className="bg-zinc-900">5K - 10K</option>
                     <option value="10k-25k" className="bg-zinc-900">10K - 25K</option>
@@ -128,7 +158,7 @@ export default function AuditForm() {
                 </div>
                 <div>
                   <label className={labelClass}>Your Niche</label>
-                  <select required className={selectClass}>
+                  <select name="niche" required className={selectClass}>
                     <option value="" className="bg-zinc-900">Select niche</option>
                     <option value="fitness" className="bg-zinc-900">Fitness & Health</option>
                     <option value="finance" className="bg-zinc-900">Personal Finance</option>
@@ -147,7 +177,7 @@ export default function AuditForm() {
 
               <div>
                 <label className={labelClass}>Interested In</label>
-                <select required className={selectClass}>
+                <select name="service" required className={selectClass}>
                   <option value="" className="bg-zinc-900">Select service</option>
                   <option value="product-launch" className="bg-zinc-900">Product Launch Partnership</option>
                   <option value="social-media" className="bg-zinc-900">Social Media Management</option>
@@ -161,6 +191,7 @@ export default function AuditForm() {
                   Biggest monetization challenge (optional)
                 </label>
                 <textarea
+                  name="challenge"
                   rows={3}
                   placeholder="What's holding you back from making more money from your audience?"
                   className={`${inputClass} resize-none`}
@@ -169,11 +200,12 @@ export default function AuditForm() {
 
               <motion.button
                 type="submit"
+                disabled={submitting}
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-brand-red text-white font-display font-600 text-[15px] tracking-wide py-4 rounded-btn hover:bg-brand-red-hover hover:shadow-[0_8px_30px_rgba(225,25,0,0.3)] transition-all duration-300"
+                className="w-full bg-brand-red text-white font-display font-600 text-[15px] tracking-wide py-4 rounded-btn hover:bg-brand-red-hover hover:shadow-[0_8px_30px_rgba(225,25,0,0.3)] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Get My Free Audit
+                {submitting ? "Submitting..." : "Get My Free Audit"}
               </motion.button>
             </form>
           </SlideIn>

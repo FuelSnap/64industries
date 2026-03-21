@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: "What's the revenue split?",
-    a: "We typically start with 80/20 or 70/30 in your favor. As the partnership grows and we add more services, it can move toward 50/50. You always get the bigger share to start.",
+    a: "You keep 70-80% of every dollar generated. We take the smaller share. As the partnership grows and we add more services, the split may adjust — but you always get the bigger share to start.",
   },
   {
     q: "Do I need to be in a specific niche?",

@@ -62,9 +62,9 @@ export default function SocialMedia() {
         <div className="max-w-[900px] mx-auto">
           <StaggerContainer className="grid grid-cols-3 gap-8 text-center" staggerDelay={0.15}>
             {[
-              { value: "73%", label: "Of creators struggle with posting consistency" },
-              { value: "20hrs", suffix: "/week", label: "Average time saved by our clients" },
-              { value: "3x", label: "Average audience growth rate" },
+              { value: "73%", label: "Of creators say inconsistent posting holds them back" },
+              { value: "20hrs", suffix: "/week", label: "Average time creators spend on social media management" },
+              { value: "3x", label: "Growth potential with dedicated strategy & execution" },
             ].map((stat) => (
               <StaggerItem key={stat.value}>
                 <div>

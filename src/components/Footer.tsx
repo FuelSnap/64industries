@@ -69,6 +69,12 @@ export default function Footer() {
               <Link href="/how-it-works" className="block text-zinc-400 hover:text-white transition-colors text-sm">
                 Our Process
               </Link>
+              <Link href="/privacy" className="block text-zinc-400 hover:text-white transition-colors text-sm">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="block text-zinc-400 hover:text-white transition-colors text-sm">
+                Terms of Service
+              </Link>
             </div>
           </div>
         </div>
