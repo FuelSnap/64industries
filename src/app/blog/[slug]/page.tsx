@@ -32,7 +32,7 @@ const posts: Record<string, { title: string; category: string; date: string; rea
       "Days 8-21: The Build. We handle product creation, tech setup, checkout systems, and sales copy. The creator's only job during this phase is to keep creating content. We build everything else.",
       "Days 22-28: The Warm-Up. This is where most creators fail on their own. We craft a content sequence that builds anticipation without being salesy. Story-driven posts, behind-the-scenes content, and strategic reveals.",
       "Days 29-35: The Launch. We provide scripts, timelines, and every piece of content needed. The creator posts to their audience. We manage the backend — email sequences, retargeting, customer support.",
-      "The results? A 2.5% average conversion rate on your audience, with products priced at $47-$297 depending on the niche. For a creator with 50K followers, that's $58,000-$370,000 in launch revenue.",
+      "The results? A 2.5% average conversion rate on your audience, with products priced at $47-$297 depending on the niche. For a creator with 50K followers, that&apos;s $58,000-$370,000 in launch revenue.",
       "And here's the part most people miss: the launch is just the beginning. With an evergreen sales funnel, that product continues to generate revenue every single month. The launch creates momentum. The funnel creates freedom.",
       "You don't need to be a business expert to launch a product. You need to partner with people who are.",
     ],
@@ -50,7 +50,7 @@ const posts: Record<string, { title: string; category: string; date: string; rea
       "Step 3: Don't compete on price. If you're the cheapest option, you attract the worst customers — the ones who complain the most, request refunds, and leave bad reviews. Price with confidence and let quality speak for itself.",
       "For digital products, here are some benchmarks by audience size: 10K-25K followers, price at $27-$97. 25K-100K followers, price at $97-$197. 100K+, you can comfortably charge $197-$497.",
       "For brand deals, a common formula is: $100 per 10,000 followers for an Instagram post, and $200-$500 per 10,000 subscribers for a YouTube integration. But these are minimums — negotiation is where the real money is.",
-      "The bottom line: most creators leave money on the table because they price based on what they think they're worth instead of what their audience values. Flip that script, and everything changes.",
+      "The bottom line: most creators leave money on the table because they price based on what they think they&apos;re worth instead of what their audience values. Flip that script, and everything changes.",
     ],
   },
 };
@@ -63,8 +63,8 @@ export default function BlogPost() {
   if (!post) {
     return (
       <div className="pt-32 pb-24 px-8 bg-white text-center">
-        <h1 className="font-display font-800 text-3xl text-zinc-900 mb-4">Post not found</h1>
-        <Link href="/blog" className="text-brand-red hover:underline font-display font-600">
+        <h1 className="font-display font-800 text-3xl text-brand-black mb-4">Post not found</h1>
+        <Link href="/blog" className="text-brand-black hover:underline font-display font-600">
           &larr; Back to Blog
         </Link>
       </div>
@@ -73,27 +73,27 @@ export default function BlogPost() {
 
   return (
     <>
-      <header className="pt-32 pb-12 px-8 bg-brand-dark">
+      <header className="pt-32 pb-12 px-8 bg-brand-black">
         <div className="max-w-[700px] mx-auto">
           <FadeIn>
             <Link
               href="/blog"
-              className="inline-block font-mono text-[11px] text-zinc-500 uppercase tracking-widest mb-6 hover:text-white transition-colors"
+              className="inline-block font-mono text-[11px] text-[#6B7280] uppercase tracking-widest mb-6 hover:text-white transition-colors"
             >
-              &larr; Back to Blog
+              &larr; Back to Insights
             </Link>
             <div className="flex flex-wrap items-center gap-3 mb-4">
-              <span className="font-mono text-[10px] text-brand-red uppercase tracking-widest">
+              <span className="font-mono text-[10px] text-white uppercase tracking-widest">
                 {post.category}
               </span>
-              <span className="font-mono text-[10px] text-zinc-500 uppercase tracking-widest">
+              <span className="font-mono text-[10px] text-[#6B7280] uppercase tracking-widest">
                 {post.date}
               </span>
-              <span className="font-mono text-[10px] text-zinc-500 uppercase tracking-widest">
+              <span className="font-mono text-[10px] text-[#6B7280] uppercase tracking-widest">
                 {post.readTime}
               </span>
             </div>
-            <h1 className="font-display font-800 text-[clamp(2rem,5vw,3rem)] leading-[1.1] tracking-tight text-white">
+            <h1 className="font-display font-800 text-[clamp(2rem,5vw,3rem)] leading-[1.1] tracking-[-0.02em] text-white">
               {post.title}
             </h1>
           </FadeIn>
@@ -103,29 +103,29 @@ export default function BlogPost() {
       <article className="py-16 px-8 bg-white">
         <div className="max-w-[700px] mx-auto">
           <FadeIn>
-            <div className="space-y-6 text-zinc-600 text-[16px] leading-[1.8]">
+            <div className="space-y-6 text-[#44474A] text-[16px] leading-[1.8]">
               {post.content.map((paragraph, i) => (
                 <p key={i}>{paragraph}</p>
               ))}
             </div>
           </FadeIn>
 
-          <div className="mt-16 pt-8 border-t border-surface-border">
+          <div className="mt-16 pt-8">
             <FadeIn>
-              <div className="bg-surface-light rounded-card border border-surface-border p-8 text-center">
-                <div className="font-mono text-[10px] text-brand-red uppercase tracking-widest mb-3">
+              <div className="bg-surface-light p-8 text-center">
+                <div className="font-mono text-[10px] text-[#44474A] uppercase tracking-widest mb-3">
                   Ready to Stop Leaving Money on the Table?
                 </div>
-                <h3 className="font-display font-700 text-xl text-zinc-900 mb-4">
+                <h3 className="font-display font-700 text-xl text-brand-black mb-4">
                   Get your free creator audit
                 </h3>
-                <p className="text-zinc-500 text-[14px] mb-6 max-w-md mx-auto">
+                <p className="text-[#44474A] text-[14px] mb-6 max-w-md mx-auto">
                   We&apos;ll analyze your audience and show you exactly how much revenue you&apos;re missing — with real numbers.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <Link
                     href="/audit"
-                    className="bg-brand-red text-white font-display font-600 text-[14px] tracking-wide px-8 py-3.5 rounded-btn hover:bg-brand-red-hover transition-all duration-300"
+                    className="bg-brand-black text-white font-display font-600 text-[14px] tracking-wide px-8 py-3.5 rounded-btn hover:bg-brand-charcoal transition-all duration-300"
                   >
                     Get Your Free Audit
                   </Link>
@@ -133,7 +133,7 @@ export default function BlogPost() {
                     href="https://calendly.com/64industries/intro"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="border border-surface-border text-zinc-600 font-display font-600 text-[14px] tracking-wide px-8 py-3.5 rounded-btn hover:border-brand-red/30 hover:text-brand-red transition-all duration-300"
+                    className="bg-surface-muted text-brand-black font-display font-600 text-[14px] tracking-wide px-8 py-3.5 rounded-btn hover:bg-surface-dim transition-all duration-300"
                   >
                     Book a Call
                   </a>

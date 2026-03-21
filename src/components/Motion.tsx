@@ -170,7 +170,7 @@ export function AnimatedNumber({
 
 // Gradient orb background element
 export function GradientOrb({
-  color = "rgba(225, 25, 0, 0.08)",
+  color = "rgba(26, 28, 30, 0.04)",
   size = "600px",
   position = "top-right",
   className = "",

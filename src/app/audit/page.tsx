@@ -7,16 +7,16 @@ export default function AuditPage() {
   return (
     <>
       {/* Hero intro */}
-      <section className="pt-32 pb-12 px-8 bg-brand-dark">
+      <section className="pt-32 pb-12 px-8 bg-brand-black">
         <div className="max-w-[900px] mx-auto text-center">
           <FadeIn>
-            <div className="font-mono text-[11px] text-brand-red uppercase tracking-[0.2em] mb-4">
+            <div className="font-mono text-[10px] text-[#6B7280] uppercase tracking-[0.2em] mb-4">
               Free Creator Audit
             </div>
-            <h1 className="font-display font-800 text-[clamp(2rem,5vw,3.5rem)] leading-[1.1] tracking-tight text-white mb-4">
+            <h1 className="font-display font-800 text-[clamp(2rem,5vw,3.5rem)] leading-[1.1] tracking-[-0.02em] text-white mb-4">
               Find out exactly how much revenue you&apos;re missing
             </h1>
-            <p className="text-zinc-400 text-[16px] max-w-xl mx-auto leading-relaxed">
+            <p className="text-[#6B7280] text-[16px] max-w-xl mx-auto leading-relaxed">
               Submit your details below and our team will build a personalized monetization
               audit with real revenue projections for your audience.
             </p>
@@ -32,10 +32,10 @@ export default function AuditPage() {
         <div className="max-w-[900px] mx-auto">
           <FadeIn>
             <div className="text-center mb-12">
-              <div className="font-mono text-[11px] text-brand-red uppercase tracking-[0.2em] mb-3">
+              <div className="font-mono text-[10px] text-[#44474A] uppercase tracking-[0.2em] mb-3">
                 The Process
               </div>
-              <h2 className="font-display font-800 text-2xl md:text-3xl tracking-tight text-zinc-900">
+              <h2 className="font-display font-800 text-2xl md:text-3xl tracking-[-0.02em] text-brand-black">
                 What Happens After You Submit
               </h2>
             </div>
@@ -63,15 +63,15 @@ export default function AuditPage() {
               },
             ].map((step) => (
               <StaggerItem key={step.num}>
-                <div className="bg-white rounded-card border border-surface-border p-6 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+                <div className="bg-white p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="font-mono text-2xl text-brand-red/30 font-bold">{step.num}</span>
+                    <span className="font-mono text-2xl text-[#E8EAED] font-bold">{step.num}</span>
                     <div>
-                      <h3 className="font-display font-700 text-[15px] text-zinc-900">{step.title}</h3>
-                      <span className="font-mono text-[10px] text-zinc-400 uppercase tracking-widest">{step.time}</span>
+                      <h3 className="font-display font-700 text-[15px] text-brand-black">{step.title}</h3>
+                      <span className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-widest">{step.time}</span>
                     </div>
                   </div>
-                  <p className="text-zinc-500 text-[13px] leading-relaxed">{step.desc}</p>
+                  <p className="text-[#44474A] text-[13px] leading-relaxed">{step.desc}</p>
                 </div>
               </StaggerItem>
             ))}
@@ -79,23 +79,23 @@ export default function AuditPage() {
 
           <FadeIn delay={0.4}>
             <div className="mt-12 text-center space-y-6">
-              <div className="inline-flex items-center gap-6 font-mono text-[10px] text-zinc-400 uppercase tracking-widest">
+              <div className="inline-flex items-center gap-6 font-mono text-[10px] text-[#9CA3AF] uppercase tracking-widest">
                 <span>100% Free</span>
-                <span className="w-1 h-1 bg-zinc-300 rounded-full" />
+                <span className="w-1 h-1 bg-[#E8EAED] rounded-full" />
                 <span>No Credit Card</span>
-                <span className="w-1 h-1 bg-zinc-300 rounded-full" />
+                <span className="w-1 h-1 bg-[#E8EAED] rounded-full" />
                 <span>No Obligations</span>
               </div>
 
-              <div className="pt-4 border-t border-surface-border">
-                <p className="text-zinc-500 text-[14px] mb-4">
+              <div className="pt-6">
+                <p className="text-[#44474A] text-[14px] mb-4">
                   Prefer to talk first? Skip the form and book a quick intro call.
                 </p>
                 <a
                   href="https://calendly.com/64industries/intro"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block border border-brand-red text-brand-red font-display font-600 text-[14px] tracking-wide px-8 py-3.5 rounded-btn hover:bg-brand-red hover:text-white transition-all duration-300"
+                  className="inline-block bg-brand-black text-white font-display font-600 text-[14px] tracking-wide px-8 py-3.5 rounded-btn hover:bg-brand-charcoal transition-all duration-300"
                 >
                   Book a 15-Min Call Instead
                 </a>

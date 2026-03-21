@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FadeIn, StaggerContainer, StaggerItem, HoverScale, GradientOrb } from "@/components/Motion";
+import { FadeIn, StaggerContainer, StaggerItem, HoverScale } from "@/components/Motion";
 
 const phases = [
   {
@@ -81,18 +81,17 @@ const phases = [
 export default function HowItWorks() {
   return (
     <>
-      {/* Hero (Dark) */}
-      <header className="pt-32 pb-24 px-8 bg-brand-dark relative overflow-hidden">
-        <GradientOrb color="rgba(225, 25, 0, 0.06)" size="700px" position="top-right" />
-        <div className="max-w-[1400px] mx-auto relative z-10">
+      {/* Hero (White) */}
+      <header className="pt-32 pb-24 px-8 bg-white">
+        <div className="max-w-[1400px] mx-auto">
           <FadeIn>
-            <div className="font-mono text-[11px] text-brand-red uppercase tracking-[0.2em] mb-6">
-              Our Process
+            <div className="font-mono text-[10px] text-[#44474A] uppercase tracking-[0.2em] mb-6">
+              Methodology
             </div>
-            <h1 className="font-display font-800 text-[clamp(2.5rem,5vw,4.5rem)] leading-[1.1] tracking-tight text-white max-w-3xl mb-6">
+            <h1 className="font-display font-800 text-[clamp(2.5rem,5vw,4.5rem)] leading-[1.1] tracking-[-0.02em] text-brand-black max-w-3xl mb-6">
               From first conversation to first dollar
             </h1>
-            <p className="text-zinc-400 text-[17px] max-w-2xl mb-10 leading-relaxed">
+            <p className="text-[#44474A] text-[17px] max-w-2xl mb-10 leading-relaxed">
               Six phases. Zero guesswork. Zero wasted time.
               Our team follows a proven process built from years of real launches.
             </p>
@@ -100,7 +99,7 @@ export default function HowItWorks() {
           <FadeIn delay={0.3}>
             <Link
               href="/audit"
-              className="inline-block bg-brand-red text-white font-display font-600 text-[15px] tracking-wide px-8 py-4 rounded-btn hover:bg-brand-red-hover hover:shadow-[0_8px_30px_rgba(225,25,0,0.3)] transition-all duration-300"
+              className="inline-block bg-brand-black text-white font-display font-600 text-[15px] tracking-wide px-8 py-4 rounded-btn hover:bg-brand-charcoal transition-all duration-300"
             >
               Start With a Free Audit
             </Link>
@@ -108,34 +107,34 @@ export default function HowItWorks() {
         </div>
       </header>
 
-      {/* Timeline (Light) */}
+      {/* Timeline */}
       <section className="py-24 lg:py-32 px-8 bg-surface-light">
         <div className="max-w-[1100px] mx-auto">
           <StaggerContainer className="grid md:grid-cols-2 gap-6" staggerDelay={0.1}>
             {phases.map((phase) => (
               <StaggerItem key={phase.num}>
                 <HoverScale>
-                  <div className="bg-white rounded-card border border-surface-border p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)] h-full hover:shadow-lg transition-shadow duration-300">
+                  <div className="bg-white p-8 h-full hover:bg-surface-muted transition-colors duration-300">
                     <div className="flex items-start gap-4 mb-4">
-                      <span className="font-mono text-3xl text-brand-red/30 font-bold leading-none">
+                      <span className="font-mono text-3xl text-[#E8EAED] font-bold leading-none">
                         {phase.num}
                       </span>
                       <div>
-                        <h3 className="font-display font-700 text-xl text-zinc-900">
+                        <h3 className="font-display font-700 text-xl text-brand-black">
                           {phase.title}
                         </h3>
-                        <span className="font-mono text-[10px] text-zinc-400 uppercase tracking-widest">
+                        <span className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-widest">
                           {phase.days}
                         </span>
                       </div>
                     </div>
-                    <p className="text-zinc-500 text-[14px] leading-relaxed mb-5">
+                    <p className="text-[#44474A] text-[14px] leading-relaxed mb-5">
                       {phase.desc}
                     </p>
                     <ul className="space-y-2">
                       {phase.details.map((detail) => (
-                        <li key={detail} className="flex items-start gap-2 text-zinc-500 text-[13px]">
-                          <span className="text-brand-red mt-0.5 shrink-0 text-xs">&bull;</span>
+                        <li key={detail} className="flex items-start gap-2 text-[#44474A] text-[13px]">
+                          <span className="text-[#9CA3AF] mt-0.5 shrink-0 text-xs">&bull;</span>
                           {detail}
                         </li>
                       ))}
@@ -148,19 +147,19 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      {/* CTA (Red) */}
-      <section className="py-20 px-8 bg-brand-red">
+      {/* CTA (Charcoal) */}
+      <section className="py-20 px-8 bg-brand-black">
         <div className="max-w-3xl mx-auto text-center">
           <FadeIn>
-            <h2 className="font-display font-800 text-3xl md:text-4xl tracking-tight text-white mb-6">
+            <h2 className="font-display font-800 text-3xl md:text-4xl tracking-[-0.02em] text-white mb-6">
               Ready to get started?
             </h2>
-            <p className="text-white/80 text-[15px] mb-8 max-w-lg mx-auto leading-relaxed">
+            <p className="text-[#6B7280] text-[15px] mb-8 max-w-lg mx-auto leading-relaxed">
               Skip the guesswork. Let our team audit your creator business and show you the missing revenue.
             </p>
             <Link
               href="/audit"
-              className="inline-block bg-white text-zinc-900 font-display font-600 text-[15px] tracking-wide px-10 py-4 rounded-btn hover:bg-zinc-100 transition-colors"
+              className="inline-block bg-white text-brand-black font-display font-600 text-[15px] tracking-wide px-10 py-4 rounded-btn hover:bg-surface-dim transition-colors"
             >
               Start With a Free Audit
             </Link>

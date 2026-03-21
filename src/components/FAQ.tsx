@@ -47,10 +47,10 @@ export default function FAQ() {
       <div className="max-w-[800px] mx-auto">
         <FadeIn>
           <div className="mb-12">
-            <div className="font-mono text-[11px] text-brand-red uppercase tracking-[0.2em] mb-3">
+            <div className="font-mono text-[10px] text-[#44474A] uppercase tracking-[0.2em] mb-3">
               FAQ
             </div>
-            <h2 className="font-display font-800 text-3xl md:text-4xl tracking-tight text-zinc-900">
+            <h2 className="font-display font-800 text-[clamp(1.8rem,4vw,2.8rem)] tracking-[-0.02em] text-brand-black">
               Common Questions
             </h2>
           </div>
@@ -59,18 +59,18 @@ export default function FAQ() {
         <StaggerContainer className="space-y-2" staggerDelay={0.06}>
           {faqs.map((faq, i) => (
             <StaggerItem key={i}>
-              <div className="bg-white rounded-card border border-surface-border overflow-hidden hover:shadow-sm transition-shadow duration-200">
+              <div className="bg-white overflow-hidden hover:bg-surface-muted transition-colors duration-200">
                 <button
                   onClick={() => setOpen(open === i ? null : i)}
                   className="w-full flex justify-between items-center px-6 py-5 text-left group"
                 >
-                  <span className="font-display font-600 text-[15px] text-zinc-900 group-hover:text-brand-red transition-colors pr-4">
+                  <span className="font-display font-600 text-[15px] text-brand-black group-hover:text-[#44474A] transition-colors pr-4">
                     {faq.q}
                   </span>
                   <motion.span
                     animate={{ rotate: open === i ? 45 : 0 }}
                     transition={{ duration: 0.2 }}
-                    className="text-brand-red text-xl shrink-0 font-light"
+                    className="text-brand-black text-xl shrink-0 font-light"
                   >
                     +
                   </motion.span>
@@ -86,7 +86,7 @@ export default function FAQ() {
                       className="overflow-hidden"
                     >
                       <div className="px-6 pb-5">
-                        <p className="text-zinc-500 text-[15px] leading-relaxed">
+                        <p className="text-[#44474A] text-[15px] leading-relaxed">
                           {faq.a}
                         </p>
                       </div>

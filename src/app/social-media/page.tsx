@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FadeIn, StaggerContainer, StaggerItem, HoverScale, SlideIn, GradientOrb } from "@/components/Motion";
+import { FadeIn, StaggerContainer, StaggerItem, HoverScale, SlideIn } from "@/components/Motion";
 
 const services = [
   {
@@ -29,18 +29,17 @@ const services = [
 export default function SocialMedia() {
   return (
     <>
-      {/* Hero (Dark Navy) */}
-      <header className="pt-32 pb-24 px-8 bg-brand-navy relative overflow-hidden">
-        <GradientOrb color="rgba(225, 25, 0, 0.06)" size="700px" position="top-right" />
-        <div className="max-w-[1400px] mx-auto relative z-10">
+      {/* Hero (White) */}
+      <header className="pt-32 pb-24 px-8 bg-white">
+        <div className="max-w-[1400px] mx-auto">
           <FadeIn>
-            <div className="font-mono text-[11px] text-brand-red uppercase tracking-[0.2em] mb-6">
-              Social Media Management
+            <div className="font-mono text-[10px] text-[#44474A] uppercase tracking-[0.2em] mb-6">
+              Social Intelligence
             </div>
-            <h1 className="font-display font-800 text-[clamp(2.2rem,5vw,4rem)] leading-[1.1] tracking-tight text-white max-w-3xl mb-6">
+            <h1 className="font-display font-800 text-[clamp(2.2rem,5vw,4rem)] leading-[1.1] tracking-[-0.02em] text-brand-black max-w-3xl mb-6">
               Grow your audience while you focus on creating
             </h1>
-            <p className="text-zinc-400 text-[17px] max-w-2xl mb-10 leading-relaxed">
+            <p className="text-[#44474A] text-[17px] max-w-2xl mb-10 leading-relaxed">
               Growing and maintaining a social media presence takes hours every
               day. Our team handles the strategy, the posting, and the engagement
               — so your accounts grow while you focus on what matters.
@@ -49,7 +48,7 @@ export default function SocialMedia() {
           <FadeIn delay={0.3}>
             <Link
               href="/audit"
-              className="inline-block bg-brand-red text-white font-display font-600 text-[15px] tracking-wide px-8 py-4 rounded-btn hover:bg-brand-red-hover hover:shadow-[0_8px_30px_rgba(225,25,0,0.3)] transition-all duration-300"
+              className="inline-block bg-brand-black text-white font-display font-600 text-[15px] tracking-wide px-8 py-4 rounded-btn hover:bg-brand-charcoal transition-all duration-300"
             >
               Get Started
             </Link>
@@ -58,7 +57,7 @@ export default function SocialMedia() {
       </header>
 
       {/* Stats */}
-      <section className="py-20 px-8 bg-[#0D1323]">
+      <section className="py-20 px-8 bg-brand-black">
         <div className="max-w-[900px] mx-auto">
           <StaggerContainer className="grid grid-cols-3 gap-8 text-center" staggerDelay={0.15}>
             {[
@@ -70,9 +69,9 @@ export default function SocialMedia() {
                 <div>
                   <div className="font-display font-800 text-4xl md:text-5xl text-white mb-2">
                     {stat.value}
-                    {stat.suffix && <span className="text-lg text-zinc-500">{stat.suffix}</span>}
+                    {stat.suffix && <span className="text-lg text-[#6B7280]">{stat.suffix}</span>}
                   </div>
-                  <p className="text-zinc-500 text-[13px] leading-relaxed">
+                  <p className="text-[#6B7280] text-[13px] leading-relaxed">
                     {stat.label}
                   </p>
                 </div>
@@ -83,14 +82,14 @@ export default function SocialMedia() {
       </section>
 
       {/* Services */}
-      <section className="py-24 lg:py-32 px-8 bg-brand-navy">
+      <section className="py-24 lg:py-32 px-8 bg-surface-light">
         <div className="max-w-[1400px] mx-auto">
           <FadeIn>
             <div className="mb-12">
-              <div className="font-mono text-[11px] text-brand-red uppercase tracking-[0.2em] mb-3">
+              <div className="font-mono text-[10px] text-[#44474A] uppercase tracking-[0.2em] mb-3">
                 What&apos;s Included
               </div>
-              <h2 className="font-display font-800 text-3xl md:text-4xl tracking-tight text-white">
+              <h2 className="font-display font-800 text-[clamp(1.8rem,4vw,2.8rem)] tracking-[-0.02em] text-brand-black">
                 Full-Service Management
               </h2>
             </div>
@@ -100,17 +99,17 @@ export default function SocialMedia() {
             {services.map((service) => (
               <StaggerItem key={service.title}>
                 <HoverScale scale={1.02}>
-                  <div className="bg-white/5 rounded-card border border-white/8 p-8 hover:bg-white/10 transition-colors duration-300 h-full">
-                    <h3 className="font-display font-700 text-lg text-white mb-3">
+                  <div className="bg-white p-8 hover:bg-surface-muted transition-colors duration-300 h-full">
+                    <h3 className="font-display font-700 text-lg text-brand-black mb-3">
                       {service.title}
                     </h3>
-                    <p className="text-zinc-400 text-[14px] leading-relaxed mb-5">
+                    <p className="text-[#44474A] text-[14px] leading-relaxed mb-5">
                       {service.desc}
                     </p>
                     <ul className="space-y-2">
                       {service.items.map((item) => (
-                        <li key={item} className="flex items-start gap-2 text-zinc-500 text-[13px]">
-                          <span className="text-brand-red mt-0.5 shrink-0 text-xs">&bull;</span>
+                        <li key={item} className="flex items-start gap-2 text-[#44474A] text-[13px]">
+                          <span className="text-[#9CA3AF] mt-0.5 shrink-0 text-xs">&bull;</span>
                           {item}
                         </li>
                       ))}
@@ -124,14 +123,14 @@ export default function SocialMedia() {
       </section>
 
       {/* Platforms */}
-      <section className="py-20 px-8 bg-[#0D1323]">
+      <section className="py-20 px-8 bg-brand-black">
         <div className="max-w-[1400px] mx-auto">
           <FadeIn>
             <div className="text-center mb-10">
-              <div className="font-mono text-[11px] text-brand-red uppercase tracking-[0.2em] mb-3">
+              <div className="font-mono text-[10px] text-[#6B7280] uppercase tracking-[0.2em] mb-3">
                 Platforms
               </div>
-              <h2 className="font-display font-800 text-2xl md:text-3xl tracking-tight text-white">
+              <h2 className="font-display font-800 text-2xl md:text-3xl tracking-[-0.02em] text-white">
                 We Manage All Major Platforms
               </h2>
             </div>
@@ -145,9 +144,9 @@ export default function SocialMedia() {
             ].map((p) => (
               <StaggerItem key={p.name}>
                 <HoverScale scale={1.03}>
-                  <div className="bg-white/5 rounded-card border border-white/8 p-6 text-center hover:bg-white/10 transition-colors duration-300">
+                  <div className="bg-white/5 p-6 text-center hover:bg-white/8 transition-colors duration-300">
                     <h3 className="font-display font-700 text-[15px] text-white mb-1">{p.name}</h3>
-                    <p className="text-zinc-500 text-[12px]">{p.desc}</p>
+                    <p className="text-[#6B7280] text-[12px]">{p.desc}</p>
                   </div>
                 </HoverScale>
               </StaggerItem>
@@ -157,15 +156,14 @@ export default function SocialMedia() {
       </section>
 
       {/* Pricing */}
-      <section className="py-24 lg:py-32 px-8 bg-brand-navy relative overflow-hidden">
-        <GradientOrb color="rgba(225, 25, 0, 0.04)" size="500px" position="bottom-left" />
+      <section className="py-24 lg:py-32 px-8 bg-white relative overflow-hidden">
         <div className="max-w-[900px] mx-auto relative z-10">
           <FadeIn>
             <div className="text-center mb-12">
-              <div className="font-mono text-[11px] text-brand-red uppercase tracking-[0.2em] mb-3">
+              <div className="font-mono text-[10px] text-[#44474A] uppercase tracking-[0.2em] mb-3">
                 Pricing
               </div>
-              <h2 className="font-display font-800 text-3xl md:text-4xl tracking-tight text-white">
+              <h2 className="font-display font-800 text-[clamp(1.8rem,4vw,2.8rem)] tracking-[-0.02em] text-brand-black">
                 Simple Pricing
               </h2>
             </div>
@@ -173,13 +171,13 @@ export default function SocialMedia() {
 
           <div className="grid md:grid-cols-2 gap-6">
             <SlideIn direction="left">
-              <div className="bg-white/5 rounded-card border border-white/8 p-8 h-full flex flex-col">
-                <div className="font-mono text-[10px] text-zinc-500 uppercase tracking-widest mb-2">Growth</div>
-                <div className="font-display font-800 text-3xl text-white mb-1">
-                  $1,500<span className="text-lg text-zinc-500">/mo</span>
+              <div className="bg-surface-light p-8 h-full flex flex-col">
+                <div className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-widest mb-2">Growth</div>
+                <div className="font-display font-800 text-3xl text-brand-black mb-1">
+                  $1,500<span className="text-lg text-[#9CA3AF]">/mo</span>
                 </div>
-                <p className="text-zinc-400 text-[14px] mb-5">Perfect for creators getting started with professional management.</p>
-                <ul className="space-y-2 text-zinc-400 text-[13px] mb-8 flex-1">
+                <p className="text-[#44474A] text-[14px] mb-5">Perfect for creators getting started with professional management.</p>
+                <ul className="space-y-2 text-[#44474A] text-[13px] mb-8 flex-1">
                   <li>2 platforms</li>
                   <li>Content calendar & posting</li>
                   <li>Basic engagement management</li>
@@ -187,7 +185,7 @@ export default function SocialMedia() {
                 </ul>
                 <Link
                   href="/audit"
-                  className="block bg-white/10 text-white font-display font-600 text-[14px] tracking-wide py-3.5 rounded-btn hover:bg-white/20 transition-colors text-center"
+                  className="block bg-surface-muted text-brand-black font-display font-600 text-[14px] tracking-wide py-3.5 rounded-btn hover:bg-surface-dim transition-colors text-center"
                 >
                   Get Started
                 </Link>
@@ -195,16 +193,16 @@ export default function SocialMedia() {
             </SlideIn>
 
             <SlideIn direction="right" delay={0.15}>
-              <div className="bg-brand-red rounded-card p-8 relative h-full flex flex-col">
-                <div className="absolute top-4 right-4 bg-white text-brand-red font-mono text-[10px] px-3 py-1 rounded-btn tracking-widest uppercase font-bold">
+              <div className="bg-brand-black p-8 relative h-full flex flex-col">
+                <div className="absolute top-4 right-4 bg-white text-brand-black font-mono text-[10px] px-3 py-1 rounded-btn tracking-widest uppercase font-bold">
                   Most Popular
                 </div>
-                <div className="font-mono text-[10px] text-white/60 uppercase tracking-widest mb-2">Scale</div>
+                <div className="font-mono text-[10px] text-[#6B7280] uppercase tracking-widest mb-2">Scale</div>
                 <div className="font-display font-800 text-3xl text-white mb-1">
-                  $3,000<span className="text-lg text-white/60">/mo</span>
+                  $3,000<span className="text-lg text-[#6B7280]">/mo</span>
                 </div>
-                <p className="text-white/80 text-[14px] mb-5">Full-service management for creators ready to grow fast.</p>
-                <ul className="space-y-2 text-white/80 text-[13px] mb-8 flex-1">
+                <p className="text-[#9CA3AF] text-[14px] mb-5">Full-service management for creators ready to grow fast.</p>
+                <ul className="space-y-2 text-[#9CA3AF] text-[13px] mb-8 flex-1">
                   <li>All platforms</li>
                   <li>Full content strategy & creation</li>
                   <li>Community & DM management</li>
@@ -213,7 +211,7 @@ export default function SocialMedia() {
                 </ul>
                 <Link
                   href="/audit"
-                  className="block bg-white text-brand-red font-display font-600 text-[14px] tracking-wide py-3.5 rounded-btn hover:bg-zinc-100 transition-colors text-center"
+                  className="block bg-white text-brand-black font-display font-600 text-[14px] tracking-wide py-3.5 rounded-btn hover:bg-surface-dim transition-colors text-center"
                 >
                   Get Started
                 </Link>
@@ -224,18 +222,18 @@ export default function SocialMedia() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-8 bg-[#0D1323]">
+      <section className="py-20 px-8 bg-surface-light">
         <div className="max-w-3xl mx-auto text-center">
           <FadeIn>
-            <h2 className="font-display font-800 text-3xl md:text-4xl tracking-tight text-white mb-4">
+            <h2 className="font-display font-800 text-3xl md:text-4xl tracking-[-0.02em] text-brand-black mb-4">
               Let us handle your social media
             </h2>
-            <p className="text-zinc-400 text-[15px] mb-8 max-w-lg mx-auto leading-relaxed">
+            <p className="text-[#44474A] text-[15px] mb-8 max-w-lg mx-auto leading-relaxed">
               Start with a free audit to see where your social presence stands and what growth looks like with a team behind you.
             </p>
             <Link
               href="/audit"
-              className="inline-block bg-brand-red text-white font-display font-600 text-[15px] tracking-wide px-10 py-4 rounded-btn hover:bg-brand-red-hover hover:shadow-[0_8px_30px_rgba(225,25,0,0.3)] transition-all duration-300"
+              className="inline-block bg-brand-black text-white font-display font-600 text-[15px] tracking-wide px-10 py-4 rounded-btn hover:bg-brand-charcoal transition-all duration-300"
             >
               Get Your Free Audit
             </Link>

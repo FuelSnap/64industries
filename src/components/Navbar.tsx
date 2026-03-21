@@ -15,26 +15,24 @@ export default function Navbar() {
 
   const links = [
     { href: "/how-it-works", label: "How It Works" },
-    { href: "/creators", label: "For Creators" },
-    { href: "/social-media", label: "Social Media" },
+    { href: "/creators", label: "Services" },
+    { href: "/case-studies", label: "Case Studies" },
     { href: "/about", label: "About" },
-    { href: "/founder", label: "Founder" },
+    { href: "/blog", label: "Blog" },
   ];
 
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-lg shadow-[0_1px_3px_rgba(0,0,0,0.05)]"
-          : "bg-transparent"
+          ? "bg-white/90 backdrop-blur-xl"
+          : "bg-white"
       }`}
     >
       <div className="max-w-[1400px] mx-auto flex justify-between items-center px-8 py-5">
         <Link
           href="/"
-          className={`text-xl font-display font-700 tracking-tight transition-colors ${
-            scrolled ? "text-zinc-900" : "text-white"
-          }`}
+          className="font-display font-800 text-[18px] tracking-[-0.02em] text-brand-black"
         >
           64 Industries
         </Link>
@@ -44,11 +42,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-[14px] font-body font-500 transition-colors ${
-                scrolled
-                  ? "text-zinc-500 hover:text-zinc-900"
-                  : "text-white/70 hover:text-white"
-              }`}
+              className="font-mono text-[11px] uppercase tracking-[0.12em] text-[#44474A] hover:text-brand-black transition-colors"
             >
               {link.label}
             </Link>
@@ -57,16 +51,14 @@ export default function Navbar() {
 
         <Link
           href="/audit"
-          className="hidden lg:block bg-brand-red text-white font-display font-600 text-[13px] tracking-wide px-5 py-2.5 rounded-btn hover:bg-brand-red-hover transition-colors"
+          className="hidden lg:block bg-brand-black text-white font-display font-600 text-[13px] tracking-wide px-6 py-2.5 rounded-btn hover:bg-brand-charcoal transition-colors"
         >
-          Get Your Audit
+          Audit Request
         </Link>
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className={`lg:hidden transition-colors ${
-            scrolled ? "text-zinc-900" : "text-white"
-          }`}
+          className="lg:hidden text-brand-black"
           aria-label="Toggle menu"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -80,13 +72,13 @@ export default function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="lg:hidden bg-white border-t border-surface-border px-8 pb-6 shadow-lg">
+        <div className="lg:hidden bg-white px-8 pb-6">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="block py-3 text-zinc-600 hover:text-zinc-900 transition-colors text-[15px] font-body"
+              className="block py-3 font-mono text-[11px] uppercase tracking-[0.12em] text-[#44474A] hover:text-brand-black transition-colors"
             >
               {link.label}
             </Link>
@@ -94,9 +86,9 @@ export default function Navbar() {
           <Link
             href="/audit"
             onClick={() => setMobileOpen(false)}
-            className="block mt-4 bg-brand-red text-white font-display font-600 text-[14px] px-6 py-3 rounded-btn text-center"
+            className="block mt-4 bg-brand-black text-white font-display font-600 text-[13px] px-6 py-3 rounded-btn text-center"
           >
-            Get Your Audit
+            Audit Request
           </Link>
         </div>
       )}

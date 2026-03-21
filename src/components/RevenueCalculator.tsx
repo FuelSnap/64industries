@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { FadeIn, SlideIn, GradientOrb } from "@/components/Motion";
+import { FadeIn, SlideIn } from "@/components/Motion";
 
 export default function RevenueCalculator() {
   const [followers, setFollowers] = useState(30000);
@@ -18,15 +18,13 @@ export default function RevenueCalculator() {
 
   return (
     <section className="py-24 lg:py-32 px-8 bg-surface-light relative overflow-hidden">
-      <GradientOrb color="rgba(0, 200, 83, 0.04)" size="500px" position="bottom-right" />
-
       <div className="max-w-[1400px] mx-auto relative z-10">
         <FadeIn>
           <div className="mb-12">
-            <div className="font-mono text-[11px] text-brand-red uppercase tracking-[0.2em] mb-3">
-              Revenue Calculator
+            <div className="font-mono text-[10px] text-[#44474A] uppercase tracking-[0.2em] mb-3">
+              Yield Projection
             </div>
-            <h2 className="font-display font-800 text-3xl md:text-4xl tracking-tight text-zinc-900">
+            <h2 className="font-display font-800 text-[clamp(1.8rem,4vw,2.8rem)] tracking-[-0.02em] text-brand-black">
               Estimate Your Potential
             </h2>
           </div>
@@ -37,10 +35,10 @@ export default function RevenueCalculator() {
             <div className="space-y-10">
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
-                  <span className="font-mono text-[11px] text-zinc-500 uppercase tracking-widest">
+                  <span className="font-mono text-[11px] text-[#44474A] uppercase tracking-widest">
                     Audience Size
                   </span>
-                  <span className="font-mono text-sm text-brand-red font-bold">
+                  <span className="font-mono text-sm text-brand-black font-bold">
                     {formatNumber(followers)}
                   </span>
                 </div>
@@ -53,7 +51,7 @@ export default function RevenueCalculator() {
                   onChange={(e) => setFollowers(Number(e.target.value))}
                   className="w-full"
                 />
-                <div className="flex justify-between font-mono text-[10px] text-zinc-400">
+                <div className="flex justify-between font-mono text-[10px] text-[#9CA3AF]">
                   <span>5K</span>
                   <span>200K</span>
                 </div>
@@ -61,10 +59,10 @@ export default function RevenueCalculator() {
 
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
-                  <span className="font-mono text-[11px] text-zinc-500 uppercase tracking-widest">
+                  <span className="font-mono text-[11px] text-[#44474A] uppercase tracking-widest">
                     Product Price
                   </span>
-                  <span className="font-mono text-sm text-brand-red font-bold">
+                  <span className="font-mono text-sm text-brand-black font-bold">
                     {formatCurrency(price)}
                   </span>
                 </div>
@@ -77,7 +75,7 @@ export default function RevenueCalculator() {
                   onChange={(e) => setPrice(Number(e.target.value))}
                   className="w-full"
                 />
-                <div className="flex justify-between font-mono text-[10px] text-zinc-400">
+                <div className="flex justify-between font-mono text-[10px] text-[#9CA3AF]">
                   <span>$27</span>
                   <span>$297</span>
                 </div>
@@ -86,23 +84,23 @@ export default function RevenueCalculator() {
           </SlideIn>
 
           <SlideIn direction="right" delay={0.15}>
-            <div className="bg-white rounded-card border border-surface-border p-8 lg:p-10 shadow-[0_4px_20px_rgba(0,0,0,0.06)]">
+            <div className="bg-white p-8 lg:p-10">
               <div className="space-y-6">
-                <div className="flex justify-between items-center pb-4 border-b border-surface-border">
-                  <span className="font-mono text-[10px] text-zinc-400 uppercase tracking-widest">Conversion Rate</span>
-                  <span className="font-mono text-sm text-zinc-600">2.5%</span>
+                <div className="flex justify-between items-center pb-4" style={{ borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
+                  <span className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-widest">Conversion Rate</span>
+                  <span className="font-mono text-sm text-[#44474A]">2.5%</span>
                 </div>
-                <div className="flex justify-between items-center pb-4 border-b border-surface-border">
-                  <span className="font-mono text-[10px] text-zinc-400 uppercase tracking-widest">Estimated Sales</span>
-                  <span className="font-display font-700 text-xl text-zinc-900">{formatNumber(sales)}</span>
+                <div className="flex justify-between items-center pb-4" style={{ borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
+                  <span className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-widest">Estimated Sales</span>
+                  <span className="font-display font-700 text-xl text-brand-black">{formatNumber(sales)}</span>
                 </div>
-                <div className="flex justify-between items-center pb-4 border-b border-surface-border">
-                  <span className="font-mono text-[10px] text-zinc-400 uppercase tracking-widest">Launch Revenue</span>
-                  <span className="font-display font-700 text-xl text-zinc-900">{formatCurrency(revenue)}</span>
+                <div className="flex justify-between items-center pb-4" style={{ borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
+                  <span className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-widest">Launch Revenue</span>
+                  <span className="font-display font-700 text-xl text-brand-black">{formatCurrency(revenue)}</span>
                 </div>
                 <div className="pt-2">
-                  <div className="font-mono text-[10px] text-zinc-400 uppercase tracking-widest mb-2">Your Share (70%)</div>
-                  <div className="font-display font-800 text-4xl md:text-5xl text-[#00C853] leading-none">
+                  <div className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-widest mb-2">Your Share (70%)</div>
+                  <div className="font-display font-800 text-4xl md:text-5xl text-accent-emerald leading-none">
                     {formatCurrency(creatorShare)}
                   </div>
                 </div>
@@ -110,11 +108,11 @@ export default function RevenueCalculator() {
 
               <Link
                 href="/audit"
-                className="mt-8 block bg-brand-red text-white font-display font-600 text-[15px] tracking-wide py-4 rounded-btn hover:bg-brand-red-hover hover:shadow-[0_8px_30px_rgba(225,25,0,0.3)] transition-all duration-300 text-center"
+                className="mt-8 block bg-brand-black text-white font-display font-600 text-[15px] tracking-wide py-4 rounded-btn hover:bg-brand-charcoal transition-all duration-300 text-center"
               >
                 Get Your Real Numbers
               </Link>
-              <p className="mt-4 font-mono text-[10px] text-zinc-400 text-center leading-relaxed">
+              <p className="mt-4 font-mono text-[10px] text-[#9CA3AF] text-center leading-relaxed">
                 Estimates based on industry averages. Actual results vary by niche, engagement, and product quality.
               </p>
             </div>
