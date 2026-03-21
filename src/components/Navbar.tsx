@@ -17,7 +17,6 @@ export default function Navbar() {
     { href: "/how-it-works", label: "How It Works" },
     { href: "/creators", label: "For Creators" },
     { href: "/social-media", label: "Social Media" },
-    { href: "/results", label: "Results" },
     { href: "/about", label: "About" },
     { href: "/founder", label: "Founder" },
   ];

@@ -341,53 +341,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== RESULTS PREVIEW ===== */}
-      <section className="py-24 lg:py-32 px-8 bg-surface-light">
-        <div className="max-w-[1400px] mx-auto">
-          <FadeIn>
-            <div className="text-center mb-12">
-              <div className="font-mono text-[11px] text-brand-red uppercase tracking-[0.2em] mb-3">
-                Results
-              </div>
-              <h2 className="font-display font-800 text-3xl md:text-4xl tracking-tight text-zinc-900 mb-4">
-                Results Dropping Soon
-              </h2>
-              <p className="text-zinc-500 text-[15px] max-w-xl mx-auto">
-                Our first creator partnerships are in progress. Real numbers from real launches coming soon.
-              </p>
-            </div>
-          </FadeIn>
-
-          <StaggerContainer className="grid md:grid-cols-3 gap-6 mb-10" staggerDelay={0.1}>
-            {[1, 2, 3].map((i) => (
-              <StaggerItem key={i}>
-                <div className="bg-white rounded-card border border-surface-border p-8 flex items-center justify-center min-h-[180px] shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-                  <div className="text-center">
-                    <div className="font-mono text-zinc-300 text-[11px] uppercase tracking-widest">
-                      Case Study {String(i).padStart(2, "0")}
-                    </div>
-                    <div className="font-display font-700 text-zinc-300 text-lg mt-1">
-                      Coming Soon
-                    </div>
-                  </div>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-
-          <FadeIn delay={0.3}>
-            <div className="text-center">
-              <Link
-                href="/audit"
-                className="inline-block bg-brand-red text-white font-display font-600 text-[15px] tracking-wide px-8 py-4 rounded-btn hover:bg-brand-red-hover hover:shadow-[0_8px_30px_rgba(225,25,0,0.3)] transition-all duration-300"
-              >
-                Be One of Our First Case Studies
-              </Link>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
       {/* ===== FAQ ===== */}
       <FAQ />
 
