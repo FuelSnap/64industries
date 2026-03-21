@@ -155,13 +155,13 @@ export default function ForCreators() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <SlideIn direction="left">
               <div>
-                <div className="font-mono text-[10px] text-[#6B7280] uppercase tracking-[0.2em] mb-3">
+                <div className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-[0.2em] mb-3">
                   The Deal
                 </div>
                 <h2 className="font-display font-800 text-3xl md:text-4xl tracking-[-0.02em] text-white mb-6 leading-tight">
                   You create. We build the business behind it.
                 </h2>
-                <p className="text-[#6B7280] text-[15px] leading-relaxed mb-8">
+                <p className="text-[#9CA3AF] text-[15px] leading-relaxed mb-8">
                   We handle the heavy lifting — product creation, tech setup, sales pages,
                   launch strategy, email sequences. Your main job is to keep creating the
                   content you already make.
@@ -185,7 +185,7 @@ export default function ForCreators() {
                 ].map((item) => (
                   <div key={item.label} className="bg-white/5 p-5 flex items-center justify-between hover:bg-white/8 transition-colors duration-300">
                     <div>
-                      <div className="font-mono text-[10px] text-[#6B7280] uppercase tracking-widest mb-1">{item.label}</div>
+                      <div className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-widest mb-1">{item.label}</div>
                       <div className="text-[#9CA3AF] text-[13px]">{item.desc}</div>
                     </div>
                     <div className="font-display font-800 text-xl text-white">{item.value}</div>

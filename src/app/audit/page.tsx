@@ -10,13 +10,13 @@ export default function AuditPage() {
       <section className="pt-32 pb-12 px-8 bg-brand-black">
         <div className="max-w-[900px] mx-auto text-center">
           <FadeIn>
-            <div className="font-mono text-[10px] text-[#6B7280] uppercase tracking-[0.2em] mb-4">
+            <div className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-[0.2em] mb-4">
               Free Creator Audit
             </div>
             <h1 className="font-display font-800 text-[clamp(2rem,5vw,3.5rem)] leading-[1.1] tracking-[-0.02em] text-white mb-4">
               Find out exactly how much revenue you&apos;re missing
             </h1>
-            <p className="text-[#6B7280] text-[16px] max-w-xl mx-auto leading-relaxed">
+            <p className="text-[#9CA3AF] text-[16px] max-w-xl mx-auto leading-relaxed">
               Submit your details below and our team will build a personalized monetization
               audit with real revenue projections for your audience.
             </p>
@@ -65,7 +65,7 @@ export default function AuditPage() {
               <StaggerItem key={step.num}>
                 <div className="bg-white p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="font-mono text-2xl text-[#E8EAED] font-bold">{step.num}</span>
+                    <span className="font-mono text-2xl text-[#C4C8CC] font-bold">{step.num}</span>
                     <div>
                       <h3 className="font-display font-700 text-[15px] text-brand-black">{step.title}</h3>
                       <span className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-widest">{step.time}</span>
@@ -81,9 +81,9 @@ export default function AuditPage() {
             <div className="mt-12 text-center space-y-6">
               <div className="inline-flex items-center gap-6 font-mono text-[10px] text-[#9CA3AF] uppercase tracking-widest">
                 <span>100% Free</span>
-                <span className="w-1 h-1 bg-[#E8EAED] rounded-full" />
+                <span className="w-1 h-1 bg-[#C4C8CC] rounded-full" />
                 <span>No Credit Card</span>
-                <span className="w-1 h-1 bg-[#E8EAED] rounded-full" />
+                <span className="w-1 h-1 bg-[#C4C8CC] rounded-full" />
                 <span>No Obligations</span>
               </div>
 

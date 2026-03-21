@@ -116,7 +116,7 @@ export default function HowItWorks() {
                 <HoverScale>
                   <div className="bg-white p-8 h-full hover:bg-surface-muted transition-colors duration-300">
                     <div className="flex items-start gap-4 mb-4">
-                      <span className="font-mono text-3xl text-[#E8EAED] font-bold leading-none">
+                      <span className="font-mono text-3xl text-[#C4C8CC] font-bold leading-none">
                         {phase.num}
                       </span>
                       <div>

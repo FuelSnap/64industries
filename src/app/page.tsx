@@ -23,7 +23,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className="absolute right-[-5%] top-1/2 -translate-y-1/2 font-display font-800 text-[40vw] leading-none text-[#F1F3F4] select-none pointer-events-none"
+          className="absolute right-[-5%] top-1/2 -translate-y-1/2 font-display font-800 text-[40vw] leading-none text-[#E4E6E9] select-none pointer-events-none"
         >
           64
         </motion.div>
@@ -129,7 +129,7 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <div className="font-display font-800 text-3xl text-[#E8EAED]">$0 Recurring</div>
+                <div className="font-display font-800 text-3xl text-[#C4C8CC]">$0 Recurring</div>
               </div>
             </StaggerItem>
 
@@ -191,7 +191,7 @@ export default function Home() {
               <StaggerItem key={step.num}>
                 <HoverScale scale={1.01}>
                   <div className="bg-surface-light p-8 h-full">
-                    <div className="font-mono text-4xl text-[#E8EAED] mb-4">
+                    <div className="font-mono text-4xl text-[#C4C8CC] mb-4">
                       {step.num}
                     </div>
                     <h3 className="font-display font-700 text-lg mb-3 text-brand-black">
@@ -217,13 +217,13 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <SlideIn direction="left">
               <div>
-                <div className="font-mono text-[10px] text-[#6B7280] uppercase tracking-[0.2em] mb-3">
+                <div className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-[0.2em] mb-3">
                   Social Intelligence
                 </div>
                 <h2 className="font-display font-800 text-[clamp(1.8rem,4vw,2.8rem)] tracking-[-0.02em] text-white mb-6 leading-[1.15]">
                   Data-driven audience growth infrastructure
                 </h2>
-                <p className="text-[#6B7280] text-[15px] leading-relaxed mb-8">
+                <p className="text-[#9CA3AF] text-[15px] leading-relaxed mb-8">
                   Growing an audience requires consistency, strategy, and operational
                   bandwidth. Our social media operators handle the execution so your
                   accounts scale while you focus on creating.
@@ -250,7 +250,7 @@ export default function Home() {
                       <h3 className="font-display font-600 text-[14px] text-white mb-2">
                         {item.label}
                       </h3>
-                      <p className="text-[#6B7280] text-[13px] leading-relaxed">
+                      <p className="text-[#9CA3AF] text-[13px] leading-relaxed">
                         {item.desc}
                       </p>
                     </div>
@@ -316,7 +316,7 @@ export default function Home() {
                     }`}>
                       {service.pricing}
                     </div>
-                    <ul className={`space-y-2 text-[13px] ${service.highlight ? "text-[#6B7280]" : "text-[#44474A]"}`}>
+                    <ul className={`space-y-2 text-[13px] ${service.highlight ? "text-[#9CA3AF]" : "text-[#44474A]"}`}>
                       {service.features.map((f) => (
                         <li key={f}>{f}</li>
                       ))}

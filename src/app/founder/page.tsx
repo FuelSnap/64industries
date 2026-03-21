@@ -195,7 +195,7 @@ export default function Founder() {
       <section className="py-20 px-8 bg-brand-black relative overflow-hidden">
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <FadeIn>
-            <div className="font-mono text-[10px] text-[#6B7280] uppercase tracking-[0.2em] mb-4">
+            <div className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-[0.2em] mb-4">
               Connect With The Vision
             </div>
             <h2 className="font-display font-800 text-2xl md:text-3xl tracking-[-0.02em] text-white mb-8">

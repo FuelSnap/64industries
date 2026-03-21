@@ -23,10 +23,10 @@ const config: Config = {
         },
         surface: {
           white: "#FFFFFF",
-          light: "#F8F9FA",
-          muted: "#F1F3F4",
-          dim: "#E8EAED",
-          border: "#E8EAED",
+          light: "#ECEEF0",
+          muted: "#E4E6E9",
+          dim: "#D6D9DC",
+          border: "#D1D5DB",
         },
       },
       fontFamily: {

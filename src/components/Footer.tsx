@@ -9,14 +9,14 @@ export default function Footer() {
             <div className="font-display font-800 text-[20px] text-white tracking-[-0.02em] mb-4">
               64 Industries
             </div>
-            <p className="text-[#6B7280] text-[14px] leading-relaxed">
+            <p className="text-[#9CA3AF] text-[14px] leading-relaxed">
               Institutional-grade creator strategy. We architect the infrastructure
               that transforms influence into scalable revenue.
             </p>
           </div>
 
           <div>
-            <div className="font-mono text-[10px] text-[#6B7280] uppercase tracking-[0.15em] mb-6">
+            <div className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-[0.15em] mb-6">
               Strategy
             </div>
             <div className="space-y-3">
@@ -38,7 +38,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="font-mono text-[10px] text-[#6B7280] uppercase tracking-[0.15em] mb-6">
+            <div className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-[0.15em] mb-6">
               Company
             </div>
             <div className="space-y-3">
@@ -60,7 +60,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="font-mono text-[10px] text-[#6B7280] uppercase tracking-[0.15em] mb-6">
+            <div className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-[0.15em] mb-6">
               Legal
             </div>
             <div className="space-y-3">
@@ -75,10 +75,10 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
-          <div className="font-mono text-[10px] text-[#4B5563] tracking-[0.1em]">
+          <div className="font-mono text-[10px] text-[#6B7280] tracking-[0.1em]">
             &copy; 2026 64 Industries. All rights reserved.
           </div>
-          <div className="font-mono text-[10px] text-[#4B5563] uppercase tracking-[0.15em]">
+          <div className="font-mono text-[10px] text-[#6B7280] uppercase tracking-[0.15em]">
             Institutional Grade Creator Strategy
           </div>
         </div>

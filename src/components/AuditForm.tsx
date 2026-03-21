@@ -54,12 +54,12 @@ export default function AuditForm() {
           <h2 className="font-display font-800 text-3xl md:text-4xl tracking-[-0.02em] mb-6 text-white">
             We&apos;ll be in touch within 48 hours
           </h2>
-          <p className="text-[#6B7280] text-[15px] leading-relaxed mb-8">
+          <p className="text-[#9CA3AF] text-[15px] leading-relaxed mb-8">
             Our team is reviewing your profile and building your personalized
             monetization audit. Check your inbox and DMs.
           </p>
           <div className="bg-white/5 p-6 max-w-md mx-auto">
-            <div className="font-mono text-[10px] text-[#6B7280] uppercase tracking-widest mb-3">What happens next</div>
+            <div className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-widest mb-3">What happens next</div>
             <div className="space-y-3 text-left">
               {[
                 "We review your content and audience data",
@@ -78,9 +78,9 @@ export default function AuditForm() {
     );
   }
 
-  const inputClass = "w-full bg-white/5 border border-white/8 px-4 py-3 text-white text-sm rounded-btn placeholder:text-[#6B7280] focus:outline-none focus:border-white/30 focus:bg-white/8 transition-all";
+  const inputClass = "w-full bg-white/5 border border-white/8 px-4 py-3 text-white text-sm rounded-btn placeholder:text-[#9CA3AF] focus:outline-none focus:border-white/30 focus:bg-white/8 transition-all";
   const selectClass = "w-full bg-white/5 border border-white/8 px-4 py-3 text-white text-sm rounded-btn focus:outline-none focus:border-white/30 focus:bg-white/8 transition-all appearance-none";
-  const labelClass = "block font-mono text-[10px] text-[#6B7280] uppercase tracking-widest mb-2";
+  const labelClass = "block font-mono text-[10px] text-[#9CA3AF] uppercase tracking-widest mb-2";
 
   return (
     <section className="py-24 lg:py-32 px-8 bg-brand-black relative overflow-hidden">
@@ -88,17 +88,17 @@ export default function AuditForm() {
         <div className="grid lg:grid-cols-[1fr_1.2fr] gap-16 items-start">
           <SlideIn direction="left">
             <div>
-              <div className="font-mono text-[11px] text-[#6B7280] uppercase tracking-[0.2em] mb-3">
+              <div className="font-mono text-[11px] text-[#9CA3AF] uppercase tracking-[0.2em] mb-3">
                 Free Audit
               </div>
               <h2 className="font-display font-800 text-3xl md:text-4xl tracking-[-0.02em] mb-4 text-white leading-tight">
                 Get Your Free Creator Audit
               </h2>
-              <p className="text-[#6B7280] text-[15px] leading-relaxed mb-6">
+              <p className="text-[#9CA3AF] text-[15px] leading-relaxed mb-6">
                 We&apos;ll analyze your content, audience, and engagement to show
                 you exactly how much revenue you&apos;re leaving on the table.
               </p>
-              <div className="font-mono text-[10px] text-[#6B7280] uppercase tracking-widest leading-loose mb-6">
+              <div className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-widest leading-loose mb-6">
                 100% Free<br />
                 No Credit Card<br />
                 No Obligations<br />

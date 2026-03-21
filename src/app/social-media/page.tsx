@@ -69,9 +69,9 @@ export default function SocialMedia() {
                 <div>
                   <div className="font-display font-800 text-4xl md:text-5xl text-white mb-2">
                     {stat.value}
-                    {stat.suffix && <span className="text-lg text-[#6B7280]">{stat.suffix}</span>}
+                    {stat.suffix && <span className="text-lg text-[#9CA3AF]">{stat.suffix}</span>}
                   </div>
-                  <p className="text-[#6B7280] text-[13px] leading-relaxed">
+                  <p className="text-[#9CA3AF] text-[13px] leading-relaxed">
                     {stat.label}
                   </p>
                 </div>
@@ -127,7 +127,7 @@ export default function SocialMedia() {
         <div className="max-w-[1400px] mx-auto">
           <FadeIn>
             <div className="text-center mb-10">
-              <div className="font-mono text-[10px] text-[#6B7280] uppercase tracking-[0.2em] mb-3">
+              <div className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-[0.2em] mb-3">
                 Platforms
               </div>
               <h2 className="font-display font-800 text-2xl md:text-3xl tracking-[-0.02em] text-white">
@@ -146,7 +146,7 @@ export default function SocialMedia() {
                 <HoverScale scale={1.03}>
                   <div className="bg-white/5 p-6 text-center hover:bg-white/8 transition-colors duration-300">
                     <h3 className="font-display font-700 text-[15px] text-white mb-1">{p.name}</h3>
-                    <p className="text-[#6B7280] text-[12px]">{p.desc}</p>
+                    <p className="text-[#9CA3AF] text-[12px]">{p.desc}</p>
                   </div>
                 </HoverScale>
               </StaggerItem>
@@ -197,9 +197,9 @@ export default function SocialMedia() {
                 <div className="absolute top-4 right-4 bg-white text-brand-black font-mono text-[10px] px-3 py-1 rounded-btn tracking-widest uppercase font-bold">
                   Most Popular
                 </div>
-                <div className="font-mono text-[10px] text-[#6B7280] uppercase tracking-widest mb-2">Scale</div>
+                <div className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-widest mb-2">Scale</div>
                 <div className="font-display font-800 text-3xl text-white mb-1">
-                  $3,000<span className="text-lg text-[#6B7280]">/mo</span>
+                  $3,000<span className="text-lg text-[#9CA3AF]">/mo</span>
                 </div>
                 <p className="text-[#9CA3AF] text-[14px] mb-5">Full-service management for creators ready to grow fast.</p>
                 <ul className="space-y-2 text-[#9CA3AF] text-[13px] mb-8 flex-1">

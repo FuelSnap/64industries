@@ -115,7 +115,7 @@ export default function About() {
             <h2 className="font-display font-800 text-3xl md:text-4xl tracking-[-0.02em] text-white mb-4">
               Ready to turn your audience into revenue?
             </h2>
-            <p className="text-[#6B7280] text-[15px] mb-8 max-w-lg mx-auto leading-relaxed">
+            <p className="text-[#9CA3AF] text-[15px] mb-8 max-w-lg mx-auto leading-relaxed">
               Find out exactly how much you&apos;re leaving on the table. No cost, no commitment.
             </p>
             <Link

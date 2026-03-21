@@ -78,7 +78,7 @@ export default function BlogPost() {
           <FadeIn>
             <Link
               href="/blog"
-              className="inline-block font-mono text-[11px] text-[#6B7280] uppercase tracking-widest mb-6 hover:text-white transition-colors"
+              className="inline-block font-mono text-[11px] text-[#9CA3AF] uppercase tracking-widest mb-6 hover:text-white transition-colors"
             >
               &larr; Back to Insights
             </Link>
@@ -86,10 +86,10 @@ export default function BlogPost() {
               <span className="font-mono text-[10px] text-white uppercase tracking-widest">
                 {post.category}
               </span>
-              <span className="font-mono text-[10px] text-[#6B7280] uppercase tracking-widest">
+              <span className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-widest">
                 {post.date}
               </span>
-              <span className="font-mono text-[10px] text-[#6B7280] uppercase tracking-widest">
+              <span className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-widest">
                 {post.readTime}
               </span>
             </div>
