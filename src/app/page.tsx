@@ -80,6 +80,14 @@ export default function Home() {
             >
               See How It Works
             </Link>
+            <a
+              href="https://calendly.com/64industries/intro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-white/10 text-zinc-400 font-display font-600 text-[15px] tracking-wide px-8 py-4 rounded-btn hover:text-white hover:border-white/30 transition-all duration-300 text-center"
+            >
+              Book a Call
+            </a>
           </motion.div>
 
           <motion.div
@@ -234,6 +242,52 @@ export default function Home() {
               </StaggerItem>
             ))}
           </StaggerContainer>
+        </div>
+      </section>
+
+      {/* ===== VIDEO / FOUNDER MESSAGE ===== */}
+      <section className="py-24 lg:py-32 px-8 bg-white">
+        <div className="max-w-[900px] mx-auto">
+          <FadeIn>
+            <div className="text-center mb-10">
+              <div className="font-mono text-[11px] text-brand-red uppercase tracking-[0.2em] mb-3">
+                From The Founder
+              </div>
+              <h2 className="font-display font-800 text-3xl md:text-4xl tracking-tight text-zinc-900">
+                Why We Built 64 Industries
+              </h2>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.15}>
+            <div className="relative rounded-card overflow-hidden border border-surface-border shadow-[0_4px_20px_rgba(0,0,0,0.08)] aspect-video bg-brand-dark flex items-center justify-center">
+              {/* Replace this div with an iframe once the video is recorded */}
+              <div className="text-center px-8">
+                <div className="w-20 h-20 rounded-full bg-brand-red/10 flex items-center justify-center mx-auto mb-6">
+                  <svg className="w-8 h-8 fill-brand-red ml-1" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <p className="font-display font-600 text-white text-lg mb-2">
+                  Video Coming Soon
+                </p>
+                <p className="text-zinc-500 text-[14px] max-w-md mx-auto">
+                  A 60-second message from our founder on why creators deserve better than brand deals.
+                </p>
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.3}>
+            <div className="mt-8 text-center">
+              <Link
+                href="/founder"
+                className="font-display font-600 text-[14px] text-brand-red hover:underline"
+              >
+                Read the full founder story &rarr;
+              </Link>
+            </div>
+          </FadeIn>
         </div>
       </section>
 

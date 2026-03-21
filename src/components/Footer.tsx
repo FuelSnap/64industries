@@ -26,6 +26,8 @@ export default function Footer() {
                 { href: "/social-media", label: "Social Media" },
                 { href: "/about", label: "About" },
                 { href: "/founder", label: "Founder" },
+                { href: "/blog", label: "Blog" },
+                { href: "/case-studies", label: "Case Studies" },
               ].map((link) => (
                 <Link
                   key={link.href}

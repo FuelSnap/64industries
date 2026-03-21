@@ -78,13 +78,27 @@ export default function AuditPage() {
           </StaggerContainer>
 
           <FadeIn delay={0.4}>
-            <div className="mt-12 text-center">
+            <div className="mt-12 text-center space-y-6">
               <div className="inline-flex items-center gap-6 font-mono text-[10px] text-zinc-400 uppercase tracking-widest">
                 <span>100% Free</span>
                 <span className="w-1 h-1 bg-zinc-300 rounded-full" />
                 <span>No Credit Card</span>
                 <span className="w-1 h-1 bg-zinc-300 rounded-full" />
                 <span>No Obligations</span>
+              </div>
+
+              <div className="pt-4 border-t border-surface-border">
+                <p className="text-zinc-500 text-[14px] mb-4">
+                  Prefer to talk first? Skip the form and book a quick intro call.
+                </p>
+                <a
+                  href="https://calendly.com/64industries/intro"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block border border-brand-red text-brand-red font-display font-600 text-[14px] tracking-wide px-8 py-3.5 rounded-btn hover:bg-brand-red hover:text-white transition-all duration-300"
+                >
+                  Book a 15-Min Call Instead
+                </a>
               </div>
             </div>
           </FadeIn>
