@@ -2,24 +2,24 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a0a0a] border-t border-white/5 py-16 px-6">
+    <footer className="bg-neutral-950 py-16 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-4 gap-12">
           <div className="md:col-span-1">
             <div className="text-2xl font-black tracking-tighter text-white uppercase font-headline mb-4">
               64 INDUSTRIES
             </div>
-            <p className="text-neutral-500 text-sm font-light leading-relaxed">
+            <p className="text-neutral-500 text-sm leading-relaxed">
               Creator monetization agency. We partner with creators to turn
               audiences into revenue.
             </p>
           </div>
 
           <div>
-            <div className="font-data text-xs text-[#E11900] uppercase tracking-widest mb-4">
+            <div className="font-data text-xs text-brand-red uppercase tracking-widest mb-4">
               Navigation
             </div>
-            <div className="space-y-2">
+            <div className="space-y-3">
               <Link
                 href="/how-it-works"
                 className="block text-neutral-400 hover:text-white transition-colors text-sm"
@@ -54,10 +54,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="font-data text-xs text-[#E11900] uppercase tracking-widest mb-4">
+            <div className="font-data text-xs text-brand-red uppercase tracking-widest mb-4">
               Services
             </div>
-            <div className="space-y-2">
+            <div className="space-y-3">
               <span className="block text-neutral-400 text-sm">
                 Product Launches
               </span>
@@ -74,10 +74,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="font-data text-xs text-[#E11900] uppercase tracking-widest mb-4">
+            <div className="font-data text-xs text-brand-red uppercase tracking-widest mb-4">
               Legal
             </div>
-            <div className="space-y-2">
+            <div className="space-y-3">
               <Link
                 href="/privacy"
                 className="block text-neutral-400 hover:text-white transition-colors text-sm"
@@ -94,7 +94,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="font-data text-xs text-neutral-600 uppercase tracking-widest">
             &copy; 2026 64 Industries. All rights reserved.
           </div>

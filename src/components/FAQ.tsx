@@ -41,36 +41,36 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="py-32 px-6 bg-surface-dim">
+    <section className="py-28 px-6 bg-white">
       <div className="max-w-3xl mx-auto">
-        <div className="font-data text-[#E11900] text-xs uppercase tracking-[0.3em] mb-4">
+        <div className="font-data text-brand-red text-xs uppercase tracking-[0.3em] mb-4">
           Common Questions
         </div>
-        <h2 className="font-headline font-black text-5xl md:text-6xl tracking-tighter uppercase mb-16">
+        <h2 className="font-headline font-black text-4xl md:text-5xl tracking-tighter uppercase text-neutral-900 mb-16">
           FAQ
         </h2>
 
-        <div className="space-y-2">
+        <div className="space-y-3">
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className="border border-white/5 bg-surface-container-low"
+              className="border border-neutral-200 bg-neutral-50 hover:bg-white transition-colors"
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
                 className="w-full flex justify-between items-center px-6 py-5 text-left group"
               >
-                <span className="font-headline font-bold text-lg uppercase tracking-tight text-white group-hover:text-primary transition-colors pr-4">
+                <span className="font-headline font-bold text-lg uppercase tracking-tight text-neutral-900 group-hover:text-brand-red transition-colors pr-4">
                   {faq.q}
                 </span>
-                <span className="font-data text-[#E11900] text-xl shrink-0">
-                  {open === i ? "−" : "+"}
+                <span className="font-data text-brand-red text-xl shrink-0">
+                  {open === i ? "\u2212" : "+"}
                 </span>
               </button>
 
               {open === i && (
                 <div className="px-6 pb-6">
-                  <p className="text-neutral-400 font-light leading-relaxed text-sm">
+                  <p className="text-neutral-600 font-light leading-relaxed text-sm">
                     {faq.a}
                   </p>
                 </div>

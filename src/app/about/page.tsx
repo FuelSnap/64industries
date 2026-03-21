@@ -22,39 +22,39 @@ const values = [
 export default function About() {
   return (
     <>
-      {/* Hero */}
-      <header className="pt-32 pb-20 px-6">
+      {/* Hero (Dark) */}
+      <header className="pt-32 pb-20 px-6 bg-brand-dark">
         <div className="max-w-7xl mx-auto">
-          <div className="font-data text-[#E11900] text-xs uppercase tracking-[0.3em] mb-6">
+          <div className="font-data text-brand-red text-xs uppercase tracking-[0.3em] mb-6">
             Our Story
           </div>
-          <h1 className="font-headline font-black text-6xl md:text-9xl tracking-tighter uppercase leading-[0.85] mb-8">
+          <h1 className="font-headline font-black text-6xl md:text-8xl tracking-tighter uppercase leading-[0.85] mb-8 text-white">
             WHO WE
             <br />
-            <span className="text-[#E11900]">ARE</span>
+            <span className="text-brand-red">ARE</span>
           </h1>
-          <p className="text-neutral-500 font-light text-lg max-w-2xl">
+          <p className="text-neutral-400 font-light text-lg max-w-2xl leading-relaxed">
             We are the team behind the internet&apos;s most undervalued
             creators. We don&apos;t build brands — we build revenue engines.
           </p>
         </div>
       </header>
 
-      {/* Origin Story */}
-      <section className="py-20 px-6 bg-surface-dim">
+      {/* Origin Story (Light) */}
+      <section className="py-24 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-[1fr_2fr] gap-12">
             <div>
-              <h2 className="font-headline font-black text-4xl md:text-5xl tracking-tighter uppercase leading-[0.85]">
+              <h2 className="font-headline font-black text-4xl md:text-5xl tracking-tighter uppercase leading-[0.85] text-neutral-900">
                 FROM AGENCY
                 <br />
                 TO
                 <br />
-                <span className="text-[#E11900]">OPERATOR.</span>
+                <span className="text-brand-red">PARTNER.</span>
               </h2>
             </div>
 
-            <div className="space-y-6 text-neutral-400 font-light leading-relaxed">
+            <div className="space-y-6 text-neutral-600 font-light leading-relaxed">
               <p>
                 We spent years inside the standard agency model. We saw the
                 bloated retainers, the focus on &quot;impressions&quot; over
@@ -77,25 +77,25 @@ export default function About() {
         </div>
       </section>
 
-      {/* Values */}
-      <section className="py-32 px-6 bg-surface">
+      {/* Values (Light alternate) */}
+      <section className="py-28 px-6 bg-neutral-50">
         <div className="max-w-7xl mx-auto">
-          <div className="font-data text-[#E11900] text-xs uppercase tracking-[0.3em] mb-4">
+          <div className="font-data text-brand-red text-xs uppercase tracking-[0.3em] mb-4">
             What We Stand For
           </div>
-          <h2 className="font-headline font-black text-5xl md:text-6xl tracking-tighter uppercase mb-16">
-            OPERATIONAL
+          <h2 className="font-headline font-black text-4xl md:text-5xl tracking-tighter uppercase mb-16 text-neutral-900">
+            OUR
             <br />
-            <span className="text-[#E11900]">CORE</span>
+            <span className="text-brand-red">VALUES</span>
           </h2>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 gap-6">
             {values.map((value) => (
               <div
                 key={value.title}
-                className="bg-surface-container-high p-8 border border-white/5"
+                className="bg-white p-8 border border-neutral-200 shadow-sm"
               >
-                <h3 className="font-headline font-black text-lg uppercase tracking-tight mb-4">
+                <h3 className="font-headline font-black text-lg uppercase tracking-tight mb-4 text-neutral-900">
                   {value.title}
                 </h3>
                 <p className="text-neutral-500 font-light text-sm leading-relaxed">
@@ -107,19 +107,19 @@ export default function About() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 px-6 bg-[#E11900]">
+      {/* CTA (Red) */}
+      <section className="py-24 px-6 bg-brand-red">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-headline font-black text-4xl md:text-6xl tracking-tighter uppercase mb-6 text-white">
             WANT TO WORK WITH US?
           </h2>
-          <p className="text-white/80 font-light mb-10 max-w-lg mx-auto">
+          <p className="text-white/80 font-light mb-10 max-w-lg mx-auto leading-relaxed">
             Start with a free audit. We&apos;ll show you what your audience is
             really worth.
           </p>
           <Link
             href="/audit"
-            className="inline-block bg-white text-black font-headline font-black tracking-tighter px-12 py-5 uppercase hover:bg-black hover:text-white transition-all text-xl"
+            className="inline-block bg-white text-neutral-900 font-headline font-bold tracking-tight px-12 py-5 uppercase hover:bg-neutral-900 hover:text-white transition-all text-xl"
           >
             GET YOUR FREE AUDIT
           </Link>

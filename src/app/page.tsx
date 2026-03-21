@@ -6,21 +6,21 @@ import AuditForm from "@/components/AuditForm";
 export default function Home() {
   return (
     <>
-      {/* ===== HERO ===== */}
-      <header className="relative min-h-screen flex flex-col justify-center px-6 pt-24 overflow-hidden">
+      {/* ===== HERO (Dark) ===== */}
+      <header className="relative min-h-screen flex flex-col justify-center px-6 pt-24 overflow-hidden bg-brand-dark">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,_rgba(225,25,0,0.08)_0%,_transparent_50%)]" />
 
         <div className="relative z-10 max-w-7xl mx-auto w-full">
-          <div className="font-data text-[#E11900] text-xs tracking-[0.3em] mb-6 uppercase">
+          <div className="font-data text-brand-red text-xs tracking-[0.3em] mb-6 uppercase">
             Creator Monetization Agency
           </div>
 
-          <h1 className="text-[11vw] md:text-[7vw] font-black font-headline leading-[0.85] tracking-tighter uppercase mb-10 max-w-5xl">
+          <h1 className="text-[11vw] md:text-[7vw] font-black font-headline leading-[0.85] tracking-tighter uppercase mb-10 max-w-5xl text-white">
             YOUR AUDIENCE IS{" "}
-            <span className="text-[#E11900]">WORTH MORE</span> THAN YOU THINK
+            <span className="text-brand-red">WORTH MORE</span> THAN YOU THINK
           </h1>
 
-          <p className="text-neutral-500 font-light text-lg max-w-xl mb-10 leading-relaxed">
+          <p className="text-neutral-400 font-light text-lg max-w-xl mb-10 leading-relaxed">
             We partner with creators who have 10K-100K followers and help them
             launch digital products, courses, and communities — so they can
             finally make real money from the audience they&apos;ve already built.
@@ -29,13 +29,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <Link
               href="/audit"
-              className="bg-[#E11900] text-white font-headline font-black text-xl tracking-tighter px-12 py-5 uppercase hover:bg-white hover:text-black transition-all duration-200 text-center"
+              className="bg-brand-red text-white font-headline font-bold text-xl tracking-tight px-12 py-5 uppercase hover:bg-brand-red-hover transition-colors text-center"
             >
               GET YOUR FREE AUDIT
             </Link>
             <Link
               href="/how-it-works"
-              className="border border-white/20 text-white font-headline font-black text-xl tracking-tighter px-12 py-5 uppercase hover:bg-white/5 transition-all duration-200 text-center"
+              className="border border-white/20 text-white font-headline font-bold text-xl tracking-tight px-12 py-5 uppercase hover:bg-white/5 transition-all text-center"
             >
               SEE HOW IT WORKS
             </Link>
@@ -48,46 +48,46 @@ export default function Home() {
         </div>
       </header>
 
-      {/* ===== PROBLEM SECTION ===== */}
-      <section className="py-32 px-6 bg-surface-dim">
+      {/* ===== PROBLEM SECTION (Light) ===== */}
+      <section className="py-28 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="font-data text-[#E11900] text-xs uppercase tracking-[0.3em] mb-4">
+          <div className="font-data text-brand-red text-xs uppercase tracking-[0.3em] mb-4">
             The Problem
           </div>
-          <h2 className="font-headline font-black text-5xl md:text-7xl tracking-tighter uppercase mb-16">
+          <h2 className="font-headline font-black text-4xl md:text-6xl tracking-tighter uppercase mb-16 text-neutral-900">
             YOU&apos;RE LEAVING
             <br />
-            <span className="text-[#E11900]">MONEY ON THE TABLE</span>
+            <span className="text-brand-red">MONEY ON THE TABLE</span>
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-px bg-white/5">
+          <div className="grid md:grid-cols-2 gap-6">
             {/* Brand Deals */}
-            <div className="bg-surface-container-low p-10 md:p-12">
+            <div className="bg-neutral-50 p-10 md:p-12 border border-neutral-200">
               <div className="font-headline font-black text-2xl mb-6 uppercase tracking-tight text-neutral-400">
                 Standard Brand Deals
               </div>
               <ul className="space-y-4 text-neutral-500 font-light text-sm">
                 <li className="flex items-start gap-3">
-                  <span className="text-[#E11900] mt-0.5">&#x2717;</span>
+                  <span className="text-brand-red mt-0.5">&#x2717;</span>
                   One-time payouts, inconsistent income
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-[#E11900] mt-0.5">&#x2717;</span>
+                  <span className="text-brand-red mt-0.5">&#x2717;</span>
                   Zero ownership of the customer relationship
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-[#E11900] mt-0.5">&#x2717;</span>
+                  <span className="text-brand-red mt-0.5">&#x2717;</span>
                   You promote their brand, not yours
                 </li>
               </ul>
-              <div className="mt-10 font-data text-3xl text-neutral-700">
+              <div className="mt-10 font-data text-3xl text-neutral-300">
                 $0 Recurring
               </div>
             </div>
 
             {/* 64 Industries */}
-            <div className="bg-surface-container-high p-10 md:p-12 relative">
-              <div className="absolute top-0 right-0 bg-[#E11900] text-white font-data text-[10px] px-4 py-1 tracking-widest uppercase">
+            <div className="bg-brand-dark p-10 md:p-12 relative">
+              <div className="absolute top-0 right-0 bg-brand-red text-white font-data text-[10px] px-4 py-1 tracking-widest uppercase">
                 Our Model
               </div>
               <div className="font-headline font-black text-2xl mb-6 uppercase tracking-tight text-white">
@@ -115,19 +115,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== HOW IT WORKS ===== */}
-      <section className="py-32 px-6 bg-surface">
+      {/* ===== HOW IT WORKS (Light) ===== */}
+      <section className="py-28 px-6 bg-neutral-50">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
             <div>
-              <div className="font-data text-[#E11900] text-xs uppercase tracking-[0.3em] mb-4">
+              <div className="font-data text-brand-red text-xs uppercase tracking-[0.3em] mb-4">
                 The Process
               </div>
-              <h2 className="font-headline font-black text-5xl md:text-7xl tracking-tighter uppercase">
+              <h2 className="font-headline font-black text-4xl md:text-6xl tracking-tighter uppercase text-neutral-900">
                 HOW IT WORKS
               </h2>
             </div>
-            <div className="font-data text-neutral-600 uppercase tracking-widest text-xs">
+            <div className="font-data text-neutral-400 uppercase tracking-widest text-xs">
               From first conversation to first dollar
             </div>
           </div>
@@ -156,10 +156,10 @@ export default function Home() {
               },
             ].map((step) => (
               <div key={step.num} className="group">
-                <div className="font-data text-6xl text-[#E11900] mb-4 opacity-30 group-hover:opacity-100 transition-opacity">
+                <div className="font-data text-6xl text-brand-red mb-4 opacity-20 group-hover:opacity-100 transition-opacity">
                   {step.num}
                 </div>
-                <div className="font-headline font-black text-xl uppercase mb-3 tracking-tight">
+                <div className="font-headline font-black text-xl uppercase mb-3 tracking-tight text-neutral-900">
                   {step.title}
                 </div>
                 <p className="text-neutral-500 font-light text-sm leading-relaxed">
@@ -174,24 +174,24 @@ export default function Home() {
       {/* ===== REVENUE CALCULATOR ===== */}
       <RevenueCalculator />
 
-      {/* ===== YOU CREATE / WE HANDLE ===== */}
-      <section className="py-32 px-6 bg-surface-dim">
+      {/* ===== YOU CREATE / WE HANDLE (Light) ===== */}
+      <section className="py-28 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="font-headline font-black text-5xl md:text-7xl tracking-tighter uppercase mb-3">
+            <h2 className="font-headline font-black text-4xl md:text-6xl tracking-tighter uppercase mb-3 text-neutral-900">
               YOU CREATE.
             </h2>
-            <h2 className="font-headline font-black text-3xl md:text-5xl tracking-tighter uppercase text-neutral-600">
+            <h2 className="font-headline font-black text-2xl md:text-4xl tracking-tighter uppercase text-neutral-400">
               WE HANDLE EVERYTHING ELSE.
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-px bg-white/5">
-            <div className="bg-surface p-10 md:p-12">
-              <div className="font-data text-[#E11900] text-xs mb-8 uppercase tracking-widest">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-neutral-50 p-10 md:p-12 border border-neutral-200">
+              <div className="font-data text-brand-red text-xs mb-8 uppercase tracking-widest">
                 Your Focus
               </div>
-              <div className="space-y-6">
+              <div className="space-y-5">
                 {[
                   "Keep creating content you love",
                   "Engage with your audience",
@@ -201,7 +201,7 @@ export default function Home() {
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <span className="text-[#00C853] text-sm">&#x2713;</span>
-                    <span className="font-headline font-bold text-lg uppercase tracking-tight text-neutral-300">
+                    <span className="font-headline font-bold text-base uppercase tracking-tight text-neutral-700">
                       {item}
                     </span>
                   </div>
@@ -209,11 +209,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-surface-container-lowest p-10 md:p-12">
-              <div className="font-data text-[#E11900] text-xs mb-8 uppercase tracking-widest">
+            <div className="bg-brand-dark p-10 md:p-12">
+              <div className="font-data text-brand-red text-xs mb-8 uppercase tracking-widest">
                 What Our Team Handles
               </div>
-              <div className="space-y-5">
+              <div className="space-y-4">
                 {[
                   "Product strategy & packaging",
                   "Full tech setup (store, checkout, delivery)",
@@ -225,7 +225,7 @@ export default function Home() {
                   "Brand deal sourcing (optional)",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3 group">
-                    <span className="font-data text-[#E11900] group-hover:translate-x-1 transition-transform">
+                    <span className="font-data text-brand-red group-hover:translate-x-1 transition-transform text-xs">
                       &gt;&gt;
                     </span>
                     <span className="text-neutral-400 group-hover:text-white transition-colors text-sm font-light">
@@ -239,23 +239,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== SERVICES ===== */}
-      <section className="py-32 px-6 bg-surface">
+      {/* ===== SERVICES (Light) ===== */}
+      <section className="py-28 px-6 bg-neutral-50">
         <div className="max-w-7xl mx-auto">
-          <div className="font-data text-[#E11900] text-xs uppercase tracking-[0.3em] mb-4">
+          <div className="font-data text-brand-red text-xs uppercase tracking-[0.3em] mb-4">
             What We Offer
           </div>
-          <h2 className="font-headline font-black text-5xl md:text-6xl tracking-tighter uppercase mb-16">
+          <h2 className="font-headline font-black text-4xl md:text-5xl tracking-tighter uppercase mb-16 text-neutral-900">
             SERVICES
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {/* Service 1 */}
-            <div className="bg-surface-container-high p-8 border-l-4 border-[#E11900] group hover:bg-surface-container-highest transition-colors">
-              <div className="font-data text-[10px] text-[#E11900] uppercase tracking-widest mb-4">
+            <div className="bg-white p-8 border-l-4 border-brand-red shadow-sm hover:shadow-md transition-shadow">
+              <div className="font-data text-[10px] text-brand-red uppercase tracking-widest mb-4">
                 Core Service
               </div>
-              <h3 className="font-headline font-black text-2xl uppercase tracking-tight mb-4">
+              <h3 className="font-headline font-black text-2xl uppercase tracking-tight mb-4 text-neutral-900">
                 PRODUCT LAUNCH
                 <br />
                 PARTNERSHIP
@@ -265,10 +265,10 @@ export default function Home() {
                 program, or community. You pay $0 upfront. We take a cut of
                 sales.
               </p>
-              <div className="font-data text-xs text-neutral-600 uppercase tracking-widest mb-4">
+              <div className="font-data text-xs text-brand-red uppercase tracking-widest mb-4">
                 Revenue Share: 70/30 to 50/50
               </div>
-              <ul className="space-y-2 text-neutral-400 text-sm font-light">
+              <ul className="space-y-2 text-neutral-500 text-sm font-light">
                 <li>Full product creation</li>
                 <li>Tech setup & checkout</li>
                 <li>Sales copy & landing page</li>
@@ -278,11 +278,11 @@ export default function Home() {
             </div>
 
             {/* Service 2 */}
-            <div className="bg-surface-container p-8 group hover:bg-surface-container-high transition-colors">
-              <div className="font-data text-[10px] text-neutral-500 uppercase tracking-widest mb-4">
+            <div className="bg-white p-8 border border-neutral-200 shadow-sm hover:shadow-md transition-shadow">
+              <div className="font-data text-[10px] text-neutral-400 uppercase tracking-widest mb-4">
                 Add-On
               </div>
-              <h3 className="font-headline font-black text-2xl uppercase tracking-tight mb-4">
+              <h3 className="font-headline font-black text-2xl uppercase tracking-tight mb-4 text-neutral-900">
                 SOCIAL MEDIA
                 <br />
                 MANAGEMENT
@@ -291,10 +291,10 @@ export default function Home() {
                 We manage your content strategy, posting schedule, and audience
                 growth. Bigger audience means bigger launches.
               </p>
-              <div className="font-data text-xs text-neutral-600 uppercase tracking-widest mb-4">
+              <div className="font-data text-xs text-neutral-400 uppercase tracking-widest mb-4">
                 $1,500 - $3,000/mo Retainer
               </div>
-              <ul className="space-y-2 text-neutral-400 text-sm font-light">
+              <ul className="space-y-2 text-neutral-500 text-sm font-light">
                 <li>Content strategy & scheduling</li>
                 <li>Engagement management</li>
                 <li>Growth tactics & trends</li>
@@ -303,11 +303,11 @@ export default function Home() {
             </div>
 
             {/* Service 3 */}
-            <div className="bg-surface-container p-8 group hover:bg-surface-container-high transition-colors">
-              <div className="font-data text-[10px] text-neutral-500 uppercase tracking-widest mb-4">
+            <div className="bg-white p-8 border border-neutral-200 shadow-sm hover:shadow-md transition-shadow">
+              <div className="font-data text-[10px] text-neutral-400 uppercase tracking-widest mb-4">
                 Add-On
               </div>
-              <h3 className="font-headline font-black text-2xl uppercase tracking-tight mb-4">
+              <h3 className="font-headline font-black text-2xl uppercase tracking-tight mb-4 text-neutral-900">
                 BRAND DEAL
                 <br />
                 BROKERING
@@ -316,10 +316,10 @@ export default function Home() {
                 We find brand partnerships, negotiate your rates, and handle the
                 deals. Most micro-creators undercharge by 50-200%.
               </p>
-              <div className="font-data text-xs text-neutral-600 uppercase tracking-widest mb-4">
+              <div className="font-data text-xs text-neutral-400 uppercase tracking-widest mb-4">
                 15-20% Commission
               </div>
-              <ul className="space-y-2 text-neutral-400 text-sm font-light">
+              <ul className="space-y-2 text-neutral-500 text-sm font-light">
                 <li>Brand outreach & pitching</li>
                 <li>Rate negotiation</li>
                 <li>Contract management</li>
@@ -330,13 +330,60 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== RESULTS PREVIEW ===== */}
-      <section className="py-32 px-6 bg-[#0a0a0a]">
+      {/* ===== SOCIAL MEDIA MANAGEMENT (Dark accent) ===== */}
+      <section className="py-28 px-6 bg-brand-dark">
         <div className="max-w-7xl mx-auto">
-          <div className="font-data text-[#E11900] text-xs uppercase tracking-[0.3em] mb-4">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="font-data text-brand-red text-xs uppercase tracking-[0.3em] mb-4">
+                Social Media Management
+              </div>
+              <h2 className="font-headline font-black text-4xl md:text-5xl tracking-tighter uppercase mb-6 text-white">
+                WE RUN YOUR
+                <br />
+                <span className="text-brand-red">SOCIAL MEDIA</span>
+              </h2>
+              <p className="text-neutral-400 font-light leading-relaxed mb-8">
+                Growing an audience takes consistency, strategy, and time you
+                don&apos;t have. Our social media managers handle the day-to-day so
+                your accounts keep growing while you focus on creating.
+              </p>
+              <Link
+                href="/audit"
+                className="inline-block bg-brand-red text-white font-headline font-bold tracking-tight px-10 py-4 uppercase hover:bg-brand-red-hover transition-colors text-lg"
+              >
+                LEARN MORE
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { label: "Content Strategy", desc: "Custom calendars and themes tailored to your brand and niche" },
+                { label: "Daily Posting", desc: "Consistent scheduling across Instagram, TikTok, X, and YouTube" },
+                { label: "Community Management", desc: "DM responses, comment engagement, and audience interaction" },
+                { label: "Growth & Analytics", desc: "Monthly reports, trend optimization, and follower growth tracking" },
+              ].map((item) => (
+                <div key={item.label} className="bg-white/5 p-6 border border-white/10">
+                  <h3 className="font-headline font-bold text-sm uppercase tracking-tight text-white mb-2">
+                    {item.label}
+                  </h3>
+                  <p className="text-neutral-500 text-xs font-light leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== RESULTS PREVIEW (Light) ===== */}
+      <section className="py-28 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="font-data text-brand-red text-xs uppercase tracking-[0.3em] mb-4">
             Results
           </div>
-          <h2 className="font-headline font-black text-5xl md:text-6xl tracking-tighter uppercase mb-6">
+          <h2 className="font-headline font-black text-4xl md:text-5xl tracking-tighter uppercase mb-6 text-neutral-900">
             RESULTS DROPPING SOON
           </h2>
           <p className="text-neutral-500 font-light text-lg mb-12 max-w-xl">
@@ -344,17 +391,17 @@ export default function Home() {
             real launches coming soon.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {[1, 2, 3].map((i) => (
               <div
                 key={i}
-                className="bg-surface-container border border-white/5 p-8 flex items-center justify-center min-h-[200px]"
+                className="bg-neutral-50 border border-neutral-200 p-8 flex items-center justify-center min-h-[200px]"
               >
                 <div className="text-center">
-                  <div className="font-data text-neutral-700 text-xs uppercase tracking-widest">
+                  <div className="font-data text-neutral-300 text-xs uppercase tracking-widest">
                     Case Study {String(i).padStart(2, "0")}
                   </div>
-                  <div className="font-headline font-black text-neutral-700 text-lg uppercase mt-2">
+                  <div className="font-headline font-black text-neutral-300 text-lg uppercase mt-2">
                     Coming Soon
                   </div>
                 </div>
@@ -365,7 +412,7 @@ export default function Home() {
           <div className="mt-12 text-center">
             <Link
               href="/audit"
-              className="inline-block bg-[#E11900] text-white font-headline font-black tracking-tighter px-10 py-4 uppercase hover:bg-white hover:text-black transition-all text-lg"
+              className="inline-block bg-brand-red text-white font-headline font-bold tracking-tight px-10 py-4 uppercase hover:bg-brand-red-hover transition-colors text-lg"
             >
               BE ONE OF OUR FIRST CASE STUDIES
             </Link>

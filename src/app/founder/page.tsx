@@ -3,31 +3,31 @@ import Link from "next/link";
 export default function Founder() {
   return (
     <>
-      {/* Hero */}
-      <header className="pt-32 pb-20 px-6">
+      {/* Hero (Dark) */}
+      <header className="pt-32 pb-20 px-6 bg-brand-dark">
         <div className="max-w-7xl mx-auto">
-          <div className="font-data text-[#E11900] text-xs uppercase tracking-[0.3em] mb-6">
+          <div className="font-data text-brand-red text-xs uppercase tracking-[0.3em] mb-6">
             Founder
           </div>
-          <h1 className="font-headline font-black text-6xl md:text-9xl tracking-tighter uppercase leading-[0.85] mb-8">
+          <h1 className="font-headline font-black text-6xl md:text-8xl tracking-tighter uppercase leading-[0.85] mb-8 text-white">
             THE
             <br />
-            <span className="text-[#E11900]">FOUNDER</span>
+            <span className="text-brand-red">FOUNDER</span>
           </h1>
         </div>
       </header>
 
-      {/* Story */}
-      <section className="py-20 px-6 bg-surface-dim">
+      {/* Story (Light) */}
+      <section className="py-24 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-[300px_1fr] gap-12 items-start">
             {/* Photo placeholder */}
-            <div className="bg-surface-container-high border border-white/5 aspect-square flex items-center justify-center">
+            <div className="bg-neutral-100 border border-neutral-200 aspect-square flex items-center justify-center">
               <div className="text-center">
-                <div className="font-headline font-black text-4xl text-neutral-700">
+                <div className="font-headline font-black text-4xl text-neutral-300">
                   64
                 </div>
-                <div className="font-data text-[10px] text-neutral-700 uppercase tracking-widest mt-2">
+                <div className="font-data text-[10px] text-neutral-400 uppercase tracking-widest mt-2">
                   Photo Coming Soon
                 </div>
               </div>
@@ -35,11 +35,11 @@ export default function Founder() {
 
             {/* Bio */}
             <div>
-              <h2 className="font-headline font-black text-3xl md:text-4xl tracking-tighter uppercase mb-6">
+              <h2 className="font-headline font-black text-3xl md:text-4xl tracking-tighter uppercase mb-6 text-neutral-900">
                 BUILDING 64 INDUSTRIES
               </h2>
 
-              <div className="space-y-6 text-neutral-400 font-light leading-relaxed">
+              <div className="space-y-6 text-neutral-600 font-light leading-relaxed">
                 <p>
                   I started in the creative world — building brands, designing
                   websites, and creating content for businesses and creators.
@@ -74,19 +74,19 @@ export default function Founder() {
         </div>
       </section>
 
-      {/* Philosophy */}
-      <section className="py-32 px-6 bg-surface">
+      {/* Philosophy (Light alternate) */}
+      <section className="py-28 px-6 bg-neutral-50">
         <div className="max-w-5xl mx-auto">
-          <div className="font-data text-[#E11900] text-xs uppercase tracking-[0.3em] mb-4">
+          <div className="font-data text-brand-red text-xs uppercase tracking-[0.3em] mb-4">
             Philosophy
           </div>
-          <h2 className="font-headline font-black text-4xl md:text-5xl tracking-tighter uppercase mb-12">
+          <h2 className="font-headline font-black text-4xl md:text-5xl tracking-tighter uppercase mb-12 text-neutral-900">
             HOW I THINK ABOUT THIS BUSINESS
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-surface-container-high p-8 border border-white/5">
-              <h3 className="font-headline font-black text-xl uppercase tracking-tight mb-4">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white p-8 border border-neutral-200 shadow-sm">
+              <h3 className="font-headline font-black text-xl uppercase tracking-tight mb-4 text-neutral-900">
                 ALIGNED INCENTIVES
               </h3>
               <p className="text-neutral-500 font-light text-sm leading-relaxed">
@@ -97,8 +97,8 @@ export default function Founder() {
               </p>
             </div>
 
-            <div className="bg-surface-container-high p-8 border border-white/5">
-              <h3 className="font-headline font-black text-xl uppercase tracking-tight mb-4">
+            <div className="bg-white p-8 border border-neutral-200 shadow-sm">
+              <h3 className="font-headline font-black text-xl uppercase tracking-tight mb-4 text-neutral-900">
                 FEWER, DEEPER
               </h3>
               <p className="text-neutral-500 font-light text-sm leading-relaxed">
@@ -108,8 +108,8 @@ export default function Founder() {
               </p>
             </div>
 
-            <div className="bg-surface-container-high p-8 border border-white/5">
-              <h3 className="font-headline font-black text-xl uppercase tracking-tight mb-4">
+            <div className="bg-white p-8 border border-neutral-200 shadow-sm">
+              <h3 className="font-headline font-black text-xl uppercase tracking-tight mb-4 text-neutral-900">
                 EXECUTION OVER STRATEGY
               </h3>
               <p className="text-neutral-500 font-light text-sm leading-relaxed">
@@ -119,8 +119,8 @@ export default function Founder() {
               </p>
             </div>
 
-            <div className="bg-surface-container-high p-8 border border-white/5">
-              <h3 className="font-headline font-black text-xl uppercase tracking-tight mb-4">
+            <div className="bg-white p-8 border border-neutral-200 shadow-sm">
+              <h3 className="font-headline font-black text-xl uppercase tracking-tight mb-4 text-neutral-900">
                 CREATORS DESERVE BETTER
               </h3>
               <p className="text-neutral-500 font-light text-sm leading-relaxed">
@@ -134,19 +134,19 @@ export default function Founder() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 px-6 bg-[#0a0a0a] border-t border-white/5">
+      {/* CTA (Dark) */}
+      <section className="py-24 px-6 bg-brand-dark">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-headline font-black text-4xl md:text-5xl tracking-tighter uppercase mb-6">
+          <h2 className="font-headline font-black text-4xl md:text-5xl tracking-tighter uppercase mb-6 text-white">
             LET&apos;S BUILD SOMETHING TOGETHER
           </h2>
-          <p className="text-neutral-500 font-light mb-10 max-w-lg mx-auto">
+          <p className="text-neutral-500 font-light mb-10 max-w-lg mx-auto leading-relaxed">
             If you&apos;re a creator sitting on untapped potential, I want to
             talk to you.
           </p>
           <Link
             href="/audit"
-            className="inline-block bg-[#E11900] text-white font-headline font-black tracking-tighter px-12 py-5 uppercase hover:bg-white hover:text-black transition-all text-xl"
+            className="inline-block bg-brand-red text-white font-headline font-bold tracking-tight px-12 py-5 uppercase hover:bg-brand-red-hover transition-colors text-xl"
           >
             GET YOUR FREE AUDIT
           </Link>

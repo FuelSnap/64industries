@@ -78,66 +78,66 @@ const phases = [
 export default function HowItWorks() {
   return (
     <>
-      {/* Hero */}
-      <header className="pt-32 pb-20 px-6">
+      {/* Hero (Dark) */}
+      <header className="pt-32 pb-20 px-6 bg-brand-dark">
         <div className="max-w-7xl mx-auto">
-          <div className="font-data text-[#E11900] text-xs uppercase tracking-[0.3em] mb-6">
+          <div className="font-data text-brand-red text-xs uppercase tracking-[0.3em] mb-6">
             Our Process
           </div>
-          <h1 className="font-headline font-black text-5xl md:text-8xl tracking-tighter uppercase leading-[0.85] max-w-4xl mb-8">
+          <h1 className="font-headline font-black text-5xl md:text-7xl tracking-tighter uppercase leading-[0.85] max-w-4xl mb-8 text-white">
             THE COMPLETE PROCESS — FROM FIRST DM TO FIRST DOLLAR
           </h1>
-          <p className="text-neutral-500 font-light text-lg max-w-2xl mb-10">
+          <p className="text-neutral-400 font-light text-lg max-w-2xl mb-10 leading-relaxed">
             No guesswork. No wasted time. Our team follows a proven process to
             take you from &quot;I should monetize my audience&quot; to actual
             revenue in your bank account.
           </p>
           <Link
             href="/audit"
-            className="inline-block bg-[#E11900] text-white font-headline font-black tracking-tighter px-10 py-4 uppercase hover:bg-white hover:text-black transition-all text-lg"
+            className="inline-block bg-brand-red text-white font-headline font-bold tracking-tight px-10 py-4 uppercase hover:bg-brand-red-hover transition-colors text-lg"
           >
             START WITH A FREE AUDIT
           </Link>
         </div>
       </header>
 
-      {/* Timeline */}
-      <section className="py-20 px-6 bg-surface-dim">
+      {/* Timeline (Light) */}
+      <section className="py-24 px-6 bg-neutral-50">
         <div className="max-w-5xl mx-auto">
           {phases.map((phase, i) => (
             <div
               key={phase.num}
-              className={`relative grid md:grid-cols-[200px_1fr] gap-8 pb-20 ${
+              className={`relative grid md:grid-cols-[200px_1fr] gap-8 pb-16 ${
                 i !== phases.length - 1
-                  ? "border-l-2 border-[#E11900]/20 ml-6 md:ml-0 md:border-l-0"
+                  ? "border-l-2 border-brand-red/20 ml-6 md:ml-0 md:border-l-0"
                   : "ml-6 md:ml-0"
               }`}
             >
-              {/* Left side - number and days */}
+              {/* Left side */}
               <div className="md:text-right">
-                <div className="font-data text-5xl text-[#E11900] opacity-40 mb-2">
+                <div className="font-data text-5xl text-brand-red opacity-30 mb-2">
                   {phase.num}
                 </div>
-                <div className="font-data text-xs text-neutral-600 uppercase tracking-widest">
+                <div className="font-data text-xs text-neutral-400 uppercase tracking-widest">
                   {phase.days}
                 </div>
               </div>
 
-              {/* Right side - content */}
-              <div className="bg-surface-container-high p-8 border border-white/5">
-                <h3 className="font-headline font-black text-3xl uppercase tracking-tight mb-4">
+              {/* Right side */}
+              <div className="bg-white p-8 border border-neutral-200 shadow-sm">
+                <h3 className="font-headline font-black text-3xl uppercase tracking-tight mb-4 text-neutral-900">
                   {phase.title}
                 </h3>
-                <p className="text-neutral-400 font-light text-sm leading-relaxed mb-6">
+                <p className="text-neutral-500 font-light text-sm leading-relaxed mb-6">
                   {phase.desc}
                 </p>
                 <ul className="space-y-3">
                   {phase.details.map((detail) => (
                     <li
                       key={detail}
-                      className="flex items-start gap-3 text-neutral-500 text-sm font-light"
+                      className="flex items-start gap-3 text-neutral-600 text-sm font-light"
                     >
-                      <span className="text-[#E11900] mt-0.5 shrink-0">
+                      <span className="text-brand-red mt-0.5 shrink-0">
                         &gt;&gt;
                       </span>
                       {detail}
@@ -150,19 +150,19 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      {/* Bottom CTA */}
-      <section className="py-24 px-6 bg-[#E11900]">
+      {/* Bottom CTA (Red) */}
+      <section className="py-24 px-6 bg-brand-red">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-headline font-black text-4xl md:text-6xl tracking-tighter uppercase mb-6 text-white">
             READY TO GET STARTED?
           </h2>
-          <p className="text-white/80 font-light mb-10 max-w-lg mx-auto">
+          <p className="text-white/80 font-light mb-10 max-w-lg mx-auto leading-relaxed">
             Skip the guesswork. Let our team audit your creator business and
             show you the missing revenue.
           </p>
           <Link
             href="/audit"
-            className="inline-block bg-white text-black font-headline font-black tracking-tighter px-12 py-5 uppercase hover:bg-black hover:text-white transition-all text-xl"
+            className="inline-block bg-white text-neutral-900 font-headline font-bold tracking-tight px-12 py-5 uppercase hover:bg-neutral-900 hover:text-white transition-all text-xl"
           >
             START WITH A FREE AUDIT
           </Link>

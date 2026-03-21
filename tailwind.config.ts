@@ -9,45 +9,31 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        surface: {
-          DEFAULT: "#131313",
-          dim: "#0e0e0e",
-          bright: "#3a3939",
-          container: {
-            DEFAULT: "#201f1f",
-            low: "#1c1b1b",
-            high: "#2a2a2a",
-            highest: "#353534",
-            lowest: "#0e0e0e",
-          },
+        brand: {
+          red: "#E11900",
+          "red-hover": "#C41500",
+          dark: "#0F1118",
+          navy: "#161926",
         },
-        primary: {
-          DEFAULT: "#FFB4A6",
-          container: "#E11900",
-        },
-        accent: {
-          green: "#00C853",
-          gold: "#FFB703",
-        },
-        on: {
-          surface: "#e5e2e1",
-          "surface-variant": "#e8bdb5",
-          "primary-container": "#fff6f4",
+        neutral: {
+          50: "#FAFAFA",
+          100: "#F5F5F5",
+          150: "#EFEFEF",
+          200: "#E5E5E5",
+          300: "#D4D4D4",
+          400: "#A3A3A3",
+          500: "#737373",
+          600: "#525252",
+          700: "#404040",
+          800: "#262626",
+          900: "#171717",
+          950: "#0A0A0A",
         },
       },
       fontFamily: {
         headline: ["var(--font-barlow-condensed)", "sans-serif"],
         body: ["var(--font-barlow)", "sans-serif"],
         data: ["var(--font-share-tech-mono)", "monospace"],
-      },
-      keyframes: {
-        "scroll-left": {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" },
-        },
-      },
-      animation: {
-        "scroll-left": "scroll-left 30s linear infinite",
       },
     },
   },
