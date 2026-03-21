@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/Motion";
 
 const faqs = [
   {
@@ -43,43 +45,58 @@ export default function FAQ() {
   return (
     <section className="py-24 lg:py-32 px-8 bg-surface-light">
       <div className="max-w-[800px] mx-auto">
-        <div className="mb-12">
-          <div className="font-mono text-[11px] text-brand-red uppercase tracking-[0.2em] mb-3">
-            FAQ
-          </div>
-          <h2 className="font-display font-800 text-3xl md:text-4xl tracking-tight text-zinc-900">
-            Common Questions
-          </h2>
-        </div>
-
-        <div className="space-y-2">
-          {faqs.map((faq, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-card border border-surface-border overflow-hidden"
-            >
-              <button
-                onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex justify-between items-center px-6 py-5 text-left group"
-              >
-                <span className="font-display font-600 text-[15px] text-zinc-900 group-hover:text-brand-red transition-colors pr-4">
-                  {faq.q}
-                </span>
-                <span className="text-brand-red text-xl shrink-0 font-light">
-                  {open === i ? "\u2212" : "+"}
-                </span>
-              </button>
-
-              {open === i && (
-                <div className="px-6 pb-5">
-                  <p className="text-zinc-500 text-[15px] leading-relaxed">
-                    {faq.a}
-                  </p>
-                </div>
-              )}
+        <FadeIn>
+          <div className="mb-12">
+            <div className="font-mono text-[11px] text-brand-red uppercase tracking-[0.2em] mb-3">
+              FAQ
             </div>
+            <h2 className="font-display font-800 text-3xl md:text-4xl tracking-tight text-zinc-900">
+              Common Questions
+            </h2>
+          </div>
+        </FadeIn>
+
+        <StaggerContainer className="space-y-2" staggerDelay={0.06}>
+          {faqs.map((faq, i) => (
+            <StaggerItem key={i}>
+              <div className="bg-white rounded-card border border-surface-border overflow-hidden hover:shadow-sm transition-shadow duration-200">
+                <button
+                  onClick={() => setOpen(open === i ? null : i)}
+                  className="w-full flex justify-between items-center px-6 py-5 text-left group"
+                >
+                  <span className="font-display font-600 text-[15px] text-zinc-900 group-hover:text-brand-red transition-colors pr-4">
+                    {faq.q}
+                  </span>
+                  <motion.span
+                    animate={{ rotate: open === i ? 45 : 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="text-brand-red text-xl shrink-0 font-light"
+                  >
+                    +
+                  </motion.span>
+                </button>
+
+                <AnimatePresence>
+                  {open === i && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.25, ease: "easeInOut" }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-6 pb-5">
+                        <p className="text-zinc-500 text-[15px] leading-relaxed">
+                          {faq.a}
+                        </p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );
