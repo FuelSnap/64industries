@@ -1,34 +1,34 @@
 import type { Metadata } from "next";
-import { Barlow_Condensed, Barlow, Share_Tech_Mono } from "next/font/google";
+import { Sora, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const barlowCondensed = Barlow_Condensed({
+const sora = Sora({
   subsets: ["latin"],
-  weight: ["400", "600", "700", "800", "900"],
-  variable: "--font-barlow-condensed",
+  weight: ["400", "600", "700", "800"],
+  variable: "--font-sora",
   display: "swap",
 });
 
-const barlow = Barlow({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-barlow",
+  weight: ["400", "500", "600"],
+  variable: "--font-inter",
   display: "swap",
 });
 
-const shareTechMono = Share_Tech_Mono({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: "400",
-  variable: "--font-share-tech-mono",
+  variable: "--font-jetbrains-mono",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "64 Industries | Creator Monetization Agency",
   description:
-    "We partner with creators to monetize their audiences through digital products, courses, and communities. You pay nothing upfront — we only make money when you do.",
+    "We partner with creators to monetize their audiences through digital products, courses, and communities. Performance-based — we only make money when you do.",
 };
 
 export default function RootLayout({
@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${barlowCondensed.variable} ${barlow.variable} ${shareTechMono.variable} font-body antialiased`}
+        className={`${sora.variable} ${inter.variable} ${jetbrainsMono.variable} font-body antialiased`}
       >
         <Navbar />
         <main>{children}</main>

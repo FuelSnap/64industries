@@ -41,36 +41,38 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="py-28 px-6 bg-white">
-      <div className="max-w-3xl mx-auto">
-        <div className="font-data text-brand-red text-xs uppercase tracking-[0.3em] mb-4">
-          Common Questions
+    <section className="py-24 lg:py-32 px-8 bg-surface-light">
+      <div className="max-w-[800px] mx-auto">
+        <div className="mb-12">
+          <div className="font-mono text-[11px] text-brand-red uppercase tracking-[0.2em] mb-3">
+            FAQ
+          </div>
+          <h2 className="font-display font-800 text-3xl md:text-4xl tracking-tight text-zinc-900">
+            Common Questions
+          </h2>
         </div>
-        <h2 className="font-headline font-black text-4xl md:text-5xl tracking-tighter uppercase text-neutral-900 mb-16">
-          FAQ
-        </h2>
 
-        <div className="space-y-3">
+        <div className="space-y-2">
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className="border border-neutral-200 bg-neutral-50 hover:bg-white transition-colors"
+              className="bg-white rounded-card border border-surface-border overflow-hidden"
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
                 className="w-full flex justify-between items-center px-6 py-5 text-left group"
               >
-                <span className="font-headline font-bold text-lg uppercase tracking-tight text-neutral-900 group-hover:text-brand-red transition-colors pr-4">
+                <span className="font-display font-600 text-[15px] text-zinc-900 group-hover:text-brand-red transition-colors pr-4">
                   {faq.q}
                 </span>
-                <span className="font-data text-brand-red text-xl shrink-0">
+                <span className="text-brand-red text-xl shrink-0 font-light">
                   {open === i ? "\u2212" : "+"}
                 </span>
               </button>
 
               {open === i && (
-                <div className="px-6 pb-6">
-                  <p className="text-neutral-600 font-light leading-relaxed text-sm">
+                <div className="px-6 pb-5">
+                  <p className="text-zinc-500 text-[15px] leading-relaxed">
                     {faq.a}
                   </p>
                 </div>

@@ -4,8 +4,8 @@ const phases = [
   {
     num: "01",
     days: "Days 1-3",
-    title: "DISCOVERY",
-    desc: "We dive into your content, audience demographics, and engagement patterns. Our team identifies exactly where the monetization gaps are and what your audience is hungry for.",
+    title: "Discovery",
+    desc: "We dive into your content, audience demographics, and engagement patterns to identify exactly where the monetization gaps are.",
     details: [
       "Deep analysis of your content and audience behavior",
       "Engagement rate and growth trend review",
@@ -16,8 +16,8 @@ const phases = [
   {
     num: "02",
     days: "Days 3-7",
-    title: "THE AUDIT",
-    desc: "We build your personalized Creator Monetization Audit — a full breakdown of your revenue potential with real numbers. We walk you through it on a call so you can see exactly what's possible.",
+    title: "Audit",
+    desc: "We build your personalized Creator Monetization Audit — a full breakdown of your revenue potential with real numbers.",
     details: [
       "Revenue potential calculations with your real numbers",
       "Product-market fit analysis for your niche",
@@ -28,8 +28,8 @@ const phases = [
   {
     num: "03",
     days: "Days 7-10",
-    title: "AGREEMENT",
-    desc: "If the numbers make sense for both of us, we lock in the partnership. We agree on the revenue split, define exactly what each side handles, and sign the agreement.",
+    title: "Agreement",
+    desc: "If the numbers make sense for both of us, we lock in the partnership. Revenue split, scope, and terms — all defined clearly.",
     details: [
       "Revenue split negotiation (always in your favor to start)",
       "Clear scope — what we handle vs what you handle",
@@ -40,11 +40,11 @@ const phases = [
   {
     num: "04",
     days: "Days 10-21",
-    title: "THE BUILD",
-    desc: "Our team goes to work. We build your product, set up the tech, write all the sales copy, and create the launch strategy. You approve everything before it goes live.",
+    title: "Build",
+    desc: "Our team builds your product, sets up the tech, writes all the sales copy, and creates the launch strategy.",
     details: [
-      "Product packaging (course outline, community structure, or coaching framework)",
-      "Full tech setup — storefront, checkout, payment processing",
+      "Product packaging (course, community, or coaching framework)",
+      "Full tech setup — storefront, checkout, payments",
       "Sales page copy, landing page, and email sequences",
       "Complete launch strategy and story scripts",
     ],
@@ -52,8 +52,8 @@ const phases = [
   {
     num: "05",
     days: "Days 21-35",
-    title: "LAUNCH",
-    desc: "The 14-day launch sequence goes live. You post the content we've scripted, engage with your audience, and watch the sales come in. We manage everything else behind the scenes.",
+    title: "Launch",
+    desc: "The 14-day launch sequence goes live. You post the content, engage your audience, and watch the sales come in.",
     details: [
       "5-day warm-up phase (build anticipation)",
       "5-day pre-launch (reveal and generate excitement)",
@@ -64,8 +64,8 @@ const phases = [
   {
     num: "06",
     days: "Day 35+",
-    title: "ONGOING",
-    desc: "After launch, your product continues selling on autopilot. We monitor performance, plan the next product, and keep growing your revenue month over month.",
+    title: "Ongoing",
+    desc: "After launch, your product continues selling on autopilot. We monitor performance and plan the next product.",
     details: [
       "Evergreen sales optimization",
       "Monthly performance reports and analytics",
@@ -79,92 +79,80 @@ export default function HowItWorks() {
   return (
     <>
       {/* Hero (Dark) */}
-      <header className="pt-32 pb-20 px-6 bg-brand-dark">
-        <div className="max-w-7xl mx-auto">
-          <div className="font-data text-brand-red text-xs uppercase tracking-[0.3em] mb-6">
+      <header className="pt-32 pb-24 px-8 bg-brand-dark">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="font-mono text-[11px] text-brand-red uppercase tracking-[0.2em] mb-6">
             Our Process
           </div>
-          <h1 className="font-headline font-black text-5xl md:text-7xl tracking-tighter uppercase leading-[0.85] max-w-4xl mb-8 text-white">
-            THE COMPLETE PROCESS — FROM FIRST DM TO FIRST DOLLAR
+          <h1 className="font-display font-800 text-[clamp(2.5rem,5vw,4.5rem)] leading-[1.1] tracking-tight text-white max-w-3xl mb-6">
+            From first conversation to first dollar
           </h1>
-          <p className="text-neutral-400 font-light text-lg max-w-2xl mb-10 leading-relaxed">
-            No guesswork. No wasted time. Our team follows a proven process to
-            take you from &quot;I should monetize my audience&quot; to actual
-            revenue in your bank account.
+          <p className="text-zinc-400 text-[17px] max-w-2xl mb-10 leading-relaxed">
+            The 6-Phase Process for Monetized Creators. Year 6 Skills.
+            No guesswork. No wasted time. Our team follows a proven process.
           </p>
           <Link
             href="/audit"
-            className="inline-block bg-brand-red text-white font-headline font-bold tracking-tight px-10 py-4 uppercase hover:bg-brand-red-hover transition-colors text-lg"
+            className="inline-block bg-brand-red text-white font-display font-600 text-[15px] tracking-wide px-8 py-4 rounded-btn hover:bg-brand-red-hover transition-colors"
           >
-            START WITH A FREE AUDIT
+            Start With a Free Audit
           </Link>
         </div>
       </header>
 
       {/* Timeline (Light) */}
-      <section className="py-24 px-6 bg-neutral-50">
-        <div className="max-w-5xl mx-auto">
-          {phases.map((phase, i) => (
-            <div
-              key={phase.num}
-              className={`relative grid md:grid-cols-[200px_1fr] gap-8 pb-16 ${
-                i !== phases.length - 1
-                  ? "border-l-2 border-brand-red/20 ml-6 md:ml-0 md:border-l-0"
-                  : "ml-6 md:ml-0"
-              }`}
-            >
-              {/* Left side */}
-              <div className="md:text-right">
-                <div className="font-data text-5xl text-brand-red opacity-30 mb-2">
-                  {phase.num}
+      <section className="py-24 lg:py-32 px-8 bg-surface-light">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="grid md:grid-cols-2 gap-6">
+            {phases.map((phase) => (
+              <div
+                key={phase.num}
+                className="bg-white rounded-card border border-surface-border p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <span className="font-mono text-3xl text-brand-red/30 font-bold leading-none">
+                    {phase.num}
+                  </span>
+                  <div>
+                    <h3 className="font-display font-700 text-xl text-zinc-900">
+                      {phase.title}
+                    </h3>
+                    <span className="font-mono text-[10px] text-zinc-400 uppercase tracking-widest">
+                      {phase.days}
+                    </span>
+                  </div>
                 </div>
-                <div className="font-data text-xs text-neutral-400 uppercase tracking-widest">
-                  {phase.days}
-                </div>
-              </div>
-
-              {/* Right side */}
-              <div className="bg-white p-8 border border-neutral-200 shadow-sm">
-                <h3 className="font-headline font-black text-3xl uppercase tracking-tight mb-4 text-neutral-900">
-                  {phase.title}
-                </h3>
-                <p className="text-neutral-500 font-light text-sm leading-relaxed mb-6">
+                <p className="text-zinc-500 text-[14px] leading-relaxed mb-5">
                   {phase.desc}
                 </p>
-                <ul className="space-y-3">
+                <ul className="space-y-2">
                   {phase.details.map((detail) => (
-                    <li
-                      key={detail}
-                      className="flex items-start gap-3 text-neutral-600 text-sm font-light"
-                    >
-                      <span className="text-brand-red mt-0.5 shrink-0">
-                        &gt;&gt;
-                      </span>
+                    <li key={detail} className="flex items-start gap-2 text-zinc-500 text-[13px]">
+                      <span className="text-brand-red mt-0.5 shrink-0 text-xs">&bull;</span>
                       {detail}
                     </li>
                   ))}
                 </ul>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Bottom CTA (Red) */}
-      <section className="py-24 px-6 bg-brand-red">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-headline font-black text-4xl md:text-6xl tracking-tighter uppercase mb-6 text-white">
-            READY TO GET STARTED?
+      {/* CTA (Red) */}
+      <section className="py-20 px-8 bg-brand-red">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="font-display font-800 text-3xl md:text-4xl tracking-tight text-white mb-6">
+            Ready to get started?
           </h2>
-          <p className="text-white/80 font-light mb-10 max-w-lg mx-auto leading-relaxed">
-            Skip the guesswork. Let our team audit your creator business and
-            show you the missing revenue.
+          <p className="text-white/80 text-[15px] mb-8 max-w-lg mx-auto leading-relaxed">
+            Skip the guesswork. Let our team audit your creator business and show you the missing revenue.
           </p>
           <Link
             href="/audit"
-            className="inline-block bg-white text-neutral-900 font-headline font-bold tracking-tight px-12 py-5 uppercase hover:bg-neutral-900 hover:text-white transition-all text-xl"
+            className="inline-block bg-white text-zinc-900 font-display font-600 text-[15px] tracking-wide px-10 py-4 rounded-btn hover:bg-zinc-100 transition-colors"
           >
-            START WITH A FREE AUDIT
+            Start With a Free Audit
           </Link>
         </div>
       </section>

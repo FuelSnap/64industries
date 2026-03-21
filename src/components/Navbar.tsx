@@ -26,28 +26,28 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-xl shadow-sm"
+          ? "bg-white/95 backdrop-blur-lg shadow-[0_1px_3px_rgba(0,0,0,0.05)]"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-5">
+      <div className="max-w-[1400px] mx-auto flex justify-between items-center px-8 py-5">
         <Link
           href="/"
-          className={`text-2xl font-black tracking-tighter uppercase font-headline transition-colors ${
-            scrolled ? "text-neutral-900" : "text-white"
+          className={`text-xl font-display font-700 tracking-tight transition-colors ${
+            scrolled ? "text-zinc-900" : "text-white"
           }`}
         >
-          64 INDUSTRIES
+          64 Industries
         </Link>
 
-        <div className="hidden md:flex items-center space-x-10">
+        <div className="hidden lg:flex items-center gap-10">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`font-body font-medium transition-colors text-sm tracking-wide ${
+              className={`text-[14px] font-body font-500 transition-colors ${
                 scrolled
-                  ? "text-neutral-500 hover:text-neutral-900"
+                  ? "text-zinc-500 hover:text-zinc-900"
                   : "text-white/70 hover:text-white"
               }`}
             >
@@ -58,51 +58,36 @@ export default function Navbar() {
 
         <Link
           href="/audit"
-          className="hidden md:block bg-brand-red text-white font-headline font-bold tracking-tight px-6 py-2.5 uppercase text-sm hover:bg-brand-red-hover transition-colors"
+          className="hidden lg:block bg-brand-red text-white font-display font-600 text-[13px] tracking-wide px-5 py-2.5 rounded-btn hover:bg-brand-red-hover transition-colors"
         >
-          GET YOUR AUDIT
+          Get Your Audit
         </Link>
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className={`md:hidden transition-colors ${
-            scrolled ? "text-neutral-900" : "text-white"
+          className={`lg:hidden transition-colors ${
+            scrolled ? "text-zinc-900" : "text-white"
           }`}
           aria-label="Toggle menu"
         >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {mobileOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
             ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
             )}
           </svg>
         </button>
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-neutral-100 px-6 pb-6 shadow-lg">
+        <div className="lg:hidden bg-white border-t border-surface-border px-8 pb-6 shadow-lg">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="block py-3 text-neutral-600 hover:text-neutral-900 transition-colors font-body font-medium"
+              className="block py-3 text-zinc-600 hover:text-zinc-900 transition-colors text-[15px] font-body"
             >
               {link.label}
             </Link>
@@ -110,9 +95,9 @@ export default function Navbar() {
           <Link
             href="/audit"
             onClick={() => setMobileOpen(false)}
-            className="block mt-4 bg-brand-red text-white font-headline font-bold tracking-tight px-6 py-3 uppercase text-center text-sm"
+            className="block mt-4 bg-brand-red text-white font-display font-600 text-[14px] px-6 py-3 rounded-btn text-center"
           >
-            GET YOUR AUDIT
+            Get Your Audit
           </Link>
         </div>
       )}

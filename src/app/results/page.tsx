@@ -4,99 +4,79 @@ export default function Results() {
   return (
     <>
       {/* Hero (Dark) */}
-      <header className="pt-32 pb-20 px-6 bg-brand-dark">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="font-headline font-black text-6xl md:text-[10vw] tracking-tighter uppercase leading-[0.85] mb-8 text-white">
-            RESULTS
-            <br />
-            <span className="text-brand-red">DROPPING SOON</span>
+      <header className="pt-32 pb-20 px-8 bg-brand-dark">
+        <div className="max-w-[1400px] mx-auto text-center">
+          <h1 className="font-display font-800 text-[clamp(2.5rem,6vw,5rem)] leading-[1.1] tracking-tight text-white mb-6">
+            Results dropping soon
           </h1>
-          <p className="text-neutral-400 font-light text-lg max-w-2xl leading-relaxed">
-            Our first creator partnerships are in progress. We don&apos;t ship
-            average. We ship results. Real numbers from real launches coming
-            soon.
+          <p className="text-zinc-400 text-[17px] max-w-2xl mx-auto leading-relaxed">
+            Our creator partnerships are in progress and the first results are
+            being compiled. Check back for full case studies.
           </p>
         </div>
       </header>
 
-      {/* Status + Preview (Light) */}
-      <section className="py-24 px-6 bg-neutral-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-6">
+      {/* Content (Light) */}
+      <section className="py-24 lg:py-32 px-8 bg-surface-light">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
             {/* Status Card */}
-            <div className="bg-white border border-neutral-200 p-10 shadow-sm">
-              <div className="font-data text-brand-red text-xs uppercase tracking-widest mb-6">
-                Status Update
+            <div className="bg-white rounded-card border border-surface-border p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+              <div className="font-mono text-[11px] text-brand-red uppercase tracking-widest mb-4">
+                Status: Actively Compiling
               </div>
-              <p className="text-neutral-600 font-light leading-relaxed mb-8">
-                We are currently scaling our first creator partnerships. Data is
-                being collected. Results are being documented. Check back soon
-                for the full breakdown.
+              <p className="text-zinc-600 text-[15px] leading-relaxed mb-6">
+                We are finalizing the performance data and narrative for our most
+                recent social media campaigns. Anticipate a detailed showcase
+                shortly.
               </p>
-              <h3 className="font-headline font-black text-2xl uppercase tracking-tight mb-6 text-neutral-900">
-                WANT TO BE ONE OF OUR FIRST CASE STUDIES?
+              <h3 className="font-display font-700 text-xl text-zinc-900 mb-5">
+                Want to be one of our first case studies?
               </h3>
               <Link
                 href="/audit"
-                className="inline-block bg-brand-red text-white font-headline font-bold tracking-tight px-8 py-4 uppercase hover:bg-brand-red-hover transition-colors"
+                className="inline-block bg-brand-red text-white font-display font-600 text-[14px] tracking-wide px-7 py-3.5 rounded-btn hover:bg-brand-red-hover transition-colors"
               >
-                APPLY FOR A FREE AUDIT
+                Apply for a Free Audit
               </Link>
             </div>
 
-            {/* Preview Card */}
-            <div className="bg-white border border-neutral-200 p-10 shadow-sm">
-              <div className="flex items-center gap-6 mb-8">
-                <div className="w-16 h-16 bg-neutral-100 flex items-center justify-center font-headline font-black text-xl text-neutral-300">
-                  ?
-                </div>
-                <div>
-                  <div className="font-data text-[10px] text-neutral-400 uppercase tracking-widest">
-                    Niche
-                  </div>
-                  <div className="font-headline font-black text-xl uppercase tracking-tight text-neutral-900">
-                    Coming Soon
-                  </div>
+            {/* Case Study Template */}
+            <div className="bg-white rounded-card border border-surface-border p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+              <div className="font-mono text-[10px] text-zinc-400 uppercase tracking-widest mb-4">
+                Case Study Template
+              </div>
+              <div className="bg-surface-muted rounded-card border border-surface-border aspect-video flex items-center justify-center mb-4">
+                <div className="text-center">
+                  <div className="font-display font-700 text-2xl text-zinc-300">Coming Soon</div>
+                  <div className="font-mono text-[10px] text-zinc-400 uppercase tracking-widest mt-1">Photo Placeholder</div>
                 </div>
               </div>
-
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-neutral-50 p-4 border border-neutral-200">
-                  <div className="font-data text-[10px] text-neutral-400 uppercase tracking-widest mb-1">
-                    Before
-                  </div>
-                  <div className="font-data text-lg text-neutral-300">
-                    $&mdash;/mo
-                  </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="bg-surface-muted rounded p-3 border border-surface-border">
+                  <div className="font-mono text-[9px] text-zinc-400 uppercase tracking-widest mb-1">Before</div>
+                  <div className="font-display font-700 text-lg text-zinc-300">$&mdash;/mo</div>
                 </div>
-                <div className="bg-neutral-50 p-4 border border-neutral-200">
-                  <div className="font-data text-[10px] text-neutral-400 uppercase tracking-widest mb-1">
-                    After
-                  </div>
-                  <div className="font-data text-lg text-neutral-300">
-                    $&mdash;/mo
-                  </div>
+                <div className="bg-surface-muted rounded p-3 border border-surface-border">
+                  <div className="font-mono text-[9px] text-zinc-400 uppercase tracking-widest mb-1">After</div>
+                  <div className="font-display font-700 text-lg text-zinc-300">$&mdash;/mo</div>
                 </div>
-              </div>
-
-              <div className="font-data text-neutral-300 text-xs uppercase tracking-widest">
-                Case study in progress...
               </div>
             </div>
           </div>
 
           {/* Placeholder Grid */}
-          <div className="grid md:grid-cols-3 gap-6 mt-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {[1, 2, 3].map((i) => (
               <div
                 key={i}
-                className="bg-white border border-neutral-200 p-8 min-h-[200px] flex items-center justify-center"
+                className="bg-white rounded-card border border-surface-border p-8 min-h-[180px] flex items-center justify-center shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
               >
                 <div className="text-center">
-                  <div className="font-data text-neutral-300 text-xs uppercase tracking-widest">
+                  <div className="font-mono text-zinc-300 text-[11px] uppercase tracking-widest">
                     Case Study {String(i).padStart(2, "0")}
                   </div>
-                  <div className="font-headline font-black text-neutral-300 text-lg uppercase mt-2">
+                  <div className="font-display font-700 text-zinc-300 text-lg mt-1">
                     Coming Soon
                   </div>
                 </div>
