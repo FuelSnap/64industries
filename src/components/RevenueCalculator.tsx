@@ -21,7 +21,7 @@ export default function RevenueCalculator() {
       <div className="max-w-[1400px] mx-auto relative z-10">
         <FadeIn>
           <div className="mb-12">
-            <div className="font-mono text-[10px] text-[#44474A] uppercase tracking-[0.2em] mb-3">
+            <div className="font-mono text-[10px] text-accent-emerald uppercase tracking-[0.2em] mb-3">
               Yield Projection
             </div>
             <h2 className="font-display font-800 text-[clamp(1.8rem,4vw,2.8rem)] tracking-[-0.02em] text-brand-black">
@@ -80,27 +80,36 @@ export default function RevenueCalculator() {
                   <span>$297</span>
                 </div>
               </div>
+
+              <div className="bg-white p-5">
+                <div className="font-mono text-[9px] text-[#9CA3AF] uppercase tracking-widest mb-2">
+                  Based on industry standard
+                </div>
+                <div className="flex items-baseline gap-2">
+                  <span className="font-display font-800 text-lg text-brand-black">2.5%</span>
+                  <span className="text-[#44474A] text-[13px]">average conversion rate</span>
+                </div>
+              </div>
             </div>
           </SlideIn>
 
           <SlideIn direction="right" delay={0.15}>
-            <div className="bg-white p-8 lg:p-10">
-              <div className="space-y-6">
-                <div className="flex justify-between items-center pb-4" style={{ borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
-                  <span className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-widest">Conversion Rate</span>
-                  <span className="font-mono text-sm text-[#44474A]">2.5%</span>
-                </div>
-                <div className="flex justify-between items-center pb-4" style={{ borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
+            <div className="bg-brand-black p-8 lg:p-10 relative overflow-hidden">
+              {/* Emerald glow */}
+              <div className="absolute bottom-0 right-0 w-32 h-32 bg-accent-emerald/10 blur-[60px] pointer-events-none" />
+
+              <div className="relative z-10 space-y-6">
+                <div className="flex justify-between items-center pb-4" style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
                   <span className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-widest">Estimated Sales</span>
-                  <span className="font-display font-700 text-xl text-brand-black">{formatNumber(sales)}</span>
+                  <span className="font-display font-700 text-xl text-white">{formatNumber(sales)}</span>
                 </div>
-                <div className="flex justify-between items-center pb-4" style={{ borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
+                <div className="flex justify-between items-center pb-4" style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
                   <span className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-widest">Launch Revenue</span>
-                  <span className="font-display font-700 text-xl text-brand-black">{formatCurrency(revenue)}</span>
+                  <span className="font-display font-700 text-xl text-white">{formatCurrency(revenue)}</span>
                 </div>
-                <div className="pt-2">
-                  <div className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-widest mb-2">Your Share (70%)</div>
-                  <div className="font-display font-800 text-4xl md:text-5xl text-accent-emerald leading-none">
+                <div className="pt-4">
+                  <div className="font-mono text-[10px] text-accent-emerald uppercase tracking-widest mb-3">Your Share (70%)</div>
+                  <div className="font-display font-800 text-5xl md:text-6xl text-accent-emerald leading-none">
                     {formatCurrency(creatorShare)}
                   </div>
                 </div>
@@ -108,12 +117,12 @@ export default function RevenueCalculator() {
 
               <Link
                 href="/audit"
-                className="mt-8 block bg-brand-black text-white font-display font-600 text-[15px] tracking-wide py-4 rounded-btn hover:bg-brand-charcoal transition-all duration-300 text-center"
+                className="relative z-10 mt-8 block bg-white text-brand-black font-display font-600 text-[15px] tracking-wide py-4 rounded-btn hover:bg-surface-dim transition-all duration-300 text-center"
               >
                 Get Your Real Numbers
               </Link>
-              <p className="mt-4 font-mono text-[10px] text-[#9CA3AF] text-center leading-relaxed">
-                Estimates based on industry averages. Actual results vary by niche, engagement, and product quality.
+              <p className="relative z-10 mt-4 font-mono text-[10px] text-[#9CA3AF] text-center leading-relaxed">
+                Estimates based on industry averages. Actual results vary.
               </p>
             </div>
           </SlideIn>

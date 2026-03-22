@@ -23,7 +23,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className="absolute right-[-5%] top-1/2 -translate-y-1/2 font-display font-800 text-[40vw] leading-none text-[#E4E6E9] select-none pointer-events-none"
+          className="absolute right-[-5%] top-1/2 -translate-y-1/2 font-display font-800 text-[40vw] leading-none text-[#D6D9DC] select-none pointer-events-none"
         >
           64
         </motion.div>
@@ -62,7 +62,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
-            className="flex flex-col sm:flex-row gap-4 mb-10"
+            className="flex flex-col sm:flex-row gap-4 mb-12"
           >
             <Link
               href="/audit"
@@ -86,16 +86,58 @@ export default function Home() {
             </a>
           </motion.div>
 
+          {/* Hero metric strip */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.9 }}
-            className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-[0.15em]"
+            className="flex flex-wrap gap-x-10 gap-y-4"
           >
-            $0 Upfront &mdash; Performance Partnership &mdash; Limited to 10 Creators Per Quarter
+            {[
+              { value: "1.5M+", label: "Subscribers Behind the Brand" },
+              { value: "12+", label: "Years in Creator Business" },
+              { value: "$0", label: "Upfront Investment" },
+              { value: "70-80%", label: "Creator Revenue Share" },
+            ].map((metric) => (
+              <div key={metric.label} className="flex items-baseline gap-2.5">
+                <span className="font-display font-800 text-[22px] text-brand-black leading-none">
+                  {metric.value}
+                </span>
+                <span className="font-mono text-[9px] text-[#9CA3AF] uppercase tracking-[0.12em]">
+                  {metric.label}
+                </span>
+              </div>
+            ))}
           </motion.div>
         </div>
       </header>
+
+      {/* ===== CREDIBILITY STRIP ===== */}
+      <section className="py-16 px-8 bg-brand-black">
+        <div className="max-w-[1400px] mx-auto">
+          <FadeIn>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 text-center">
+              {[
+                { value: "1.5M+", label: "YouTube Subscribers", accent: false },
+                { value: "213K", label: "Instagram Followers", accent: false },
+                { value: "$0", label: "Upfront Cost, Always", accent: true },
+                { value: "10", label: "Creators Per Quarter", accent: false },
+              ].map((stat) => (
+                <div key={stat.label}>
+                  <div className={`font-display font-800 text-3xl md:text-4xl leading-none mb-2 ${
+                    stat.accent ? "text-accent-emerald" : "text-white"
+                  }`}>
+                    {stat.value}
+                  </div>
+                  <div className="font-mono text-[9px] text-[#9CA3AF] uppercase tracking-[0.15em]">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </FadeIn>
+        </div>
+      </section>
 
       {/* ===== THE INVISIBLE REVENUE GAP ===== */}
       <section className="py-24 lg:py-32 px-8 bg-surface-light">
@@ -124,7 +166,7 @@ export default function Home() {
                     "You promote their brand, not yours",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-[#44474A] text-[15px]">
-                      <span className="text-[#9CA3AF] mt-0.5 shrink-0">&#x2717;</span>
+                      <span className="text-[#C4C8CC] mt-0.5 shrink-0 text-lg leading-none">&times;</span>
                       {item}
                     </li>
                   ))}
@@ -135,6 +177,8 @@ export default function Home() {
 
             <StaggerItem>
               <div className="bg-brand-black p-8 lg:p-10 relative overflow-hidden h-full">
+                {/* Subtle emerald glow */}
+                <div className="absolute top-0 right-0 w-40 h-40 bg-accent-emerald/10 blur-[80px] pointer-events-none" />
                 <div className="relative z-10">
                   <div className="absolute top-0 right-0 bg-accent-emerald text-white font-mono text-[10px] px-3 py-1 tracking-[0.15em] uppercase">
                     Our Model
@@ -190,7 +234,9 @@ export default function Home() {
             ].map((step) => (
               <StaggerItem key={step.num}>
                 <HoverScale scale={1.01}>
-                  <div className="bg-surface-light p-8 h-full">
+                  <div className="bg-surface-light p-8 h-full relative overflow-hidden group">
+                    {/* Emerald top accent bar */}
+                    <div className="absolute top-0 left-0 w-full h-[2px] bg-accent-emerald/0 group-hover:bg-accent-emerald transition-all duration-300" />
                     <div className="font-mono text-4xl text-[#C4C8CC] mb-4">
                       {step.num}
                     </div>
@@ -211,13 +257,75 @@ export default function Home() {
       {/* ===== YIELD PROJECTION (Calculator) ===== */}
       <RevenueCalculator />
 
+      {/* ===== FOUNDER CREDIBILITY ===== */}
+      <section className="py-24 lg:py-32 px-8 bg-white">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <SlideIn direction="left">
+              <div>
+                <div className="font-mono text-[10px] text-[#44474A] uppercase tracking-[0.2em] mb-3">
+                  Built by a Creator
+                </div>
+                <h2 className="font-display font-800 text-[clamp(1.8rem,4vw,2.8rem)] tracking-[-0.02em] text-brand-black mb-6 leading-[1.15]">
+                  We don&apos;t advise from the sidelines. We&apos;ve been in the trenches.
+                </h2>
+                <p className="text-[#44474A] text-[15px] leading-relaxed mb-8">
+                  64 Industries was founded by a creator with 1.5M+ YouTube subscribers
+                  and over a decade in the creator economy. We&apos;ve built audiences,
+                  negotiated deals, launched products, and run the ads. This isn&apos;t theory —
+                  it&apos;s infrastructure built from first-hand operator experience.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    href="/founder"
+                    className="bg-brand-black text-white font-display font-600 text-[14px] tracking-wide px-7 py-3.5 rounded-btn hover:bg-brand-charcoal transition-all duration-300 text-center"
+                  >
+                    Meet the Founder
+                  </Link>
+                  <Link
+                    href="/about"
+                    className="bg-surface-muted text-brand-black font-display font-600 text-[14px] tracking-wide px-7 py-3.5 rounded-btn hover:bg-surface-dim transition-all duration-300 text-center"
+                  >
+                    Our Story
+                  </Link>
+                </div>
+              </div>
+            </SlideIn>
+
+            <SlideIn direction="right" delay={0.2}>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { value: "1.5M+", label: "YouTube Subscribers", emerald: true },
+                  { value: "213K", label: "Instagram Followers", emerald: false },
+                  { value: "12+", label: "Years as a Creator", emerald: false },
+                  { value: "6-Figure", label: "Merch Brand Built", emerald: true },
+                ].map((item) => (
+                  <div key={item.label} className="bg-surface-light p-6">
+                    <div className={`font-display font-800 text-2xl md:text-3xl mb-1 ${
+                      item.emerald ? "text-accent-emerald" : "text-brand-black"
+                    }`}>
+                      {item.value}
+                    </div>
+                    <div className="font-mono text-[9px] text-[#9CA3AF] uppercase tracking-[0.12em]">
+                      {item.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </SlideIn>
+          </div>
+        </div>
+      </section>
+
       {/* ===== SOCIAL INTELLIGENCE ===== */}
       <section className="py-24 lg:py-32 px-8 bg-brand-black relative overflow-hidden">
+        {/* Subtle emerald glow */}
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-accent-emerald/5 blur-[120px] pointer-events-none" />
         <div className="max-w-[1400px] mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <SlideIn direction="left">
               <div>
-                <div className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-[0.2em] mb-3">
+                <div className="font-mono text-[10px] text-accent-emerald uppercase tracking-[0.2em] mb-3">
                   Social Intelligence
                 </div>
                 <h2 className="font-display font-800 text-[clamp(1.8rem,4vw,2.8rem)] tracking-[-0.02em] text-white mb-6 leading-[1.15]">
@@ -246,7 +354,8 @@ export default function Home() {
                   { label: "Analytics", desc: "Monthly performance intelligence reports" },
                 ].map((item) => (
                   <StaggerItem key={item.label}>
-                    <div className="bg-white/5 p-6 hover:bg-white/8 transition-colors duration-300">
+                    <div className="bg-white/5 p-6 hover:bg-white/10 transition-colors duration-300 relative overflow-hidden group">
+                      <div className="absolute bottom-0 left-0 w-full h-[2px] bg-accent-emerald/0 group-hover:bg-accent-emerald/40 transition-all duration-300" />
                       <h3 className="font-display font-600 text-[14px] text-white mb-2">
                         {item.label}
                       </h3>
@@ -302,9 +411,12 @@ export default function Home() {
             ].map((service) => (
               <StaggerItem key={service.title}>
                 <HoverScale scale={1.01}>
-                  <div className={`p-8 h-full transition-all duration-300 ${
+                  <div className={`p-8 h-full transition-all duration-300 relative overflow-hidden ${
                     service.highlight ? "bg-brand-black text-white" : "bg-surface-light"
                   }`}>
+                    {service.highlight && (
+                      <div className="absolute top-0 left-0 w-full h-[3px] bg-accent-emerald" />
+                    )}
                     <h3 className={`font-display font-700 text-lg mb-3 ${service.highlight ? "text-white" : "text-brand-black"}`}>
                       {service.title}
                     </h3>
@@ -318,11 +430,64 @@ export default function Home() {
                     </div>
                     <ul className={`space-y-2 text-[13px] ${service.highlight ? "text-[#9CA3AF]" : "text-[#44474A]"}`}>
                       {service.features.map((f) => (
-                        <li key={f}>{f}</li>
+                        <li key={f} className="flex items-start gap-2">
+                          <span className={`mt-0.5 shrink-0 text-[10px] ${service.highlight ? "text-accent-emerald" : "text-[#9CA3AF]"}`}>&#x2713;</span>
+                          {f}
+                        </li>
                       ))}
                     </ul>
                   </div>
                 </HoverScale>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* ===== SOCIAL PROOF QUOTES ===== */}
+      <section className="py-20 px-8 bg-surface-light">
+        <div className="max-w-[1400px] mx-auto">
+          <FadeIn>
+            <div className="text-center mb-12">
+              <div className="font-mono text-[10px] text-[#44474A] uppercase tracking-[0.2em] mb-3">
+                The Creator Economy Gap
+              </div>
+              <h2 className="font-display font-800 text-[clamp(1.8rem,4vw,2.8rem)] tracking-[-0.02em] text-brand-black">
+                Why This Exists
+              </h2>
+            </div>
+          </FadeIn>
+
+          <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.1}>
+            {[
+              {
+                stat: "$250B",
+                context: "Creator economy valuation",
+                insight: "Yet most creators with 10K-100K followers earn less than $1,000/month from their content. The infrastructure to monetize doesn't exist for them.",
+              },
+              {
+                stat: "97%",
+                context: "Of creators earn below the poverty line",
+                insight: "Not because they lack talent or audience — because nobody builds the revenue infrastructure. That's what we do.",
+              },
+              {
+                stat: "50-200%",
+                context: "Typical brand deal undercharge",
+                insight: "Micro-creators accept whatever brands offer. We negotiate based on data, not desperation. Most creators double their rate immediately.",
+              },
+            ].map((item) => (
+              <StaggerItem key={item.stat}>
+                <div className="bg-white p-8 h-full">
+                  <div className="font-display font-800 text-3xl text-accent-emerald mb-1">
+                    {item.stat}
+                  </div>
+                  <div className="font-mono text-[9px] text-[#9CA3AF] uppercase tracking-[0.12em] mb-4">
+                    {item.context}
+                  </div>
+                  <p className="text-[#44474A] text-[14px] leading-relaxed">
+                    {item.insight}
+                  </p>
+                </div>
               </StaggerItem>
             ))}
           </StaggerContainer>

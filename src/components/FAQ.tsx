@@ -43,7 +43,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="py-24 lg:py-32 px-8 bg-surface-light">
+    <section className="py-24 lg:py-32 px-8 bg-white">
       <div className="max-w-[800px] mx-auto">
         <FadeIn>
           <div className="mb-12">
@@ -56,46 +56,60 @@ export default function FAQ() {
           </div>
         </FadeIn>
 
-        <StaggerContainer className="space-y-2" staggerDelay={0.06}>
-          {faqs.map((faq, i) => (
-            <StaggerItem key={i}>
-              <div className="bg-white overflow-hidden hover:bg-surface-muted transition-colors duration-200">
-                <button
-                  onClick={() => setOpen(open === i ? null : i)}
-                  className="w-full flex justify-between items-center px-6 py-5 text-left group"
-                >
-                  <span className="font-display font-600 text-[15px] text-brand-black group-hover:text-[#44474A] transition-colors pr-4">
-                    {faq.q}
-                  </span>
-                  <motion.span
-                    animate={{ rotate: open === i ? 45 : 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="text-brand-black text-xl shrink-0 font-light"
+        <StaggerContainer className="space-y-0" staggerDelay={0.06}>
+          {faqs.map((faq, i) => {
+            const isOpen = open === i;
+            return (
+              <StaggerItem key={i}>
+                <div className={`overflow-hidden transition-colors duration-200 ${
+                  isOpen ? "bg-surface-light" : "bg-white hover:bg-surface-light/50"
+                }`} style={{ borderBottom: "1px solid rgba(0,0,0,0.05)" }}>
+                  <button
+                    onClick={() => setOpen(isOpen ? null : i)}
+                    className="w-full flex items-center gap-5 px-6 py-5 text-left group"
                   >
-                    +
-                  </motion.span>
-                </button>
-
-                <AnimatePresence>
-                  {open === i && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.25, ease: "easeInOut" }}
-                      className="overflow-hidden"
+                    <span className={`font-mono text-[12px] shrink-0 transition-colors duration-200 ${
+                      isOpen ? "text-accent-emerald" : "text-[#C4C8CC]"
+                    }`}>
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className={`font-display font-600 text-[15px] flex-1 transition-colors pr-4 ${
+                      isOpen ? "text-brand-black" : "text-brand-black"
+                    }`}>
+                      {faq.q}
+                    </span>
+                    <motion.span
+                      animate={{ rotate: isOpen ? 45 : 0 }}
+                      transition={{ duration: 0.2 }}
+                      className={`text-xl shrink-0 font-light transition-colors duration-200 ${
+                        isOpen ? "text-accent-emerald" : "text-[#C4C8CC]"
+                      }`}
                     >
-                      <div className="px-6 pb-5">
-                        <p className="text-[#44474A] text-[15px] leading-relaxed">
-                          {faq.a}
-                        </p>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            </StaggerItem>
-          ))}
+                      +
+                    </motion.span>
+                  </button>
+
+                  <AnimatePresence>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.25, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                      >
+                        <div className="px-6 pb-5 pl-[52px]">
+                          <p className="text-[#44474A] text-[15px] leading-relaxed">
+                            {faq.a}
+                          </p>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </StaggerItem>
+            );
+          })}
         </StaggerContainer>
       </div>
     </section>
